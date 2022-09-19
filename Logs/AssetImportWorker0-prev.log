@@ -1,0 +1,227 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.25f1 (9b9180224418) revision 10195328'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10  (10.0.17763) 64bit EnterpriseS' Language: 'es' Physical Memory: 16325 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.3.25f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/Lucy/Documents/GitHub/El Cuco - Zona Tiendas Camping
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+51191
+Successfully changed project path to: C:/Users/Lucy/Documents/GitHub/El Cuco - Zona Tiendas Camping
+C:/Users/Lucy/Documents/GitHub/El Cuco - Zona Tiendas Camping
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 33.42 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.25f1 (9b9180224418)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Lucy/Documents/GitHub/El Cuco - Zona Tiendas Camping/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: AMD Radeon R9 200 Series (ID=0x6810)
+    Vendor:   
+    VRAM:     4075 MB
+    Driver:   27.20.20903.8001
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56232
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001588 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 40.54 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.742 seconds
+Domain Reload Profiling:
+	ReloadAssembly (743ms)
+		BeginReloadAssembly (59ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (596ms)
+			LoadAssemblies (57ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (208ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (49ms)
+			SetupLoadedEditorAssemblies (218ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (41ms)
+				BeforeProcessingInitializeOnLoad (24ms)
+				ProcessInitializeOnLoadAttributes (110ms)
+				ProcessInitializeOnLoadMethodAttributes (36ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.005117 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.35 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.189 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1190ms)
+		BeginReloadAssembly (166ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (22ms)
+		EndReloadAssembly (944ms)
+			LoadAssemblies (108ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (329ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (52ms)
+			SetupLoadedEditorAssemblies (352ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (88ms)
+				ProcessInitializeOnLoadAttributes (241ms)
+				ProcessInitializeOnLoadMethodAttributes (11ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.41 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1519 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 68.9 MB.
+System memory in use after: 69.0 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 1958.
+Total: 3.369000 ms (FindLiveObjects: 0.215100 ms CreateObjectMapping: 0.103000 ms MarkObjects: 2.945800 ms  DeleteObjects: 0.104300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/SFX/alert.mp3
+  artifactKey: Guid(595a487807c3964498d95018f6fbbf83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SFX/alert.mp3 using Guid(595a487807c3964498d95018f6fbbf83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea1cd333bab8069df1d6d2135014e612') in 0.104300 seconds 
+  Import took 0.107059 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000204 seconds.
+  path: Assets/SFX
+  artifactKey: Guid(d0cf99e3c77b69a4792ed027c28eb188) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SFX using Guid(d0cf99e3c77b69a4792ed027c28eb188) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea293b143543bdd7308d66dde4902367') in 0.006965 seconds 
+  Import took 0.010038 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000222 seconds.
+  path: Assets/SFX/sus.mp3
+  artifactKey: Guid(371cb7eb77a01884489d18166f77fcf6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SFX/sus.mp3 using Guid(371cb7eb77a01884489d18166f77fcf6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef4e2eeb3d33bc8c40dc4eda514a6e84') in 0.018869 seconds 
+  Import took 0.021927 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.402519 seconds.
+  path: Assets/FBX
+  artifactKey: Guid(4809072e48fd86b4eac398db40d6c0d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FBX using Guid(4809072e48fd86b4eac398db40d6c0d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '848a4817d687dc0ba535c0d1b9ef78b8') in 0.007088 seconds 
+  Import took 0.010769 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.046633 seconds.
+  path: Assets/FBX/caramelo.fbx
+  artifactKey: Guid(ee889e40253417d4cafe522716f2cc3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FBX/caramelo.fbx using Guid(ee889e40253417d4cafe522716f2cc3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ecee22bf1eec4d501b1bbdef4ca8b33') in 0.079899 seconds 
+  Import took 0.083098 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000190 seconds.
+  path: Assets/FBX/left_hand.OBJ
+  artifactKey: Guid(418b7edd9bce5e64a9269a2a65667366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FBX/left_hand.OBJ using Guid(418b7edd9bce5e64a9269a2a65667366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eae769acaeaab5bc64d9d3a37e5d3022') in 0.328391 seconds 
+  Import took 0.331700 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000238 seconds.
+  path: Assets/FBX/mesa.fbx
+  artifactKey: Guid(1c02b841068a3dd4a86c27f8bbeb8eec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FBX/mesa.fbx using Guid(1c02b841068a3dd4a86c27f8bbeb8eec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b5318d133399ef5067d673ff0fc1054') in 0.030000 seconds 
+  Import took 0.033253 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000193 seconds.
+  path: Assets/FBX/R_hand.dae
+  artifactKey: Guid(201ac4b3728c96f44924f16801e1ac70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FBX/R_hand.dae using Guid(201ac4b3728c96f44924f16801e1ac70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47c6b56a89cf0de468fb82c6a4defe4f') in 0.041960 seconds 
+  Import took 0.044861 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.846910 seconds.
+  path: Assets/FBX/lampara1.fbx
+  artifactKey: Guid(22ad68ed853c5f24a8715f3792441c78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FBX/lampara1.fbx using Guid(22ad68ed853c5f24a8715f3792441c78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61bfca033dd02962b82c7558b414bef5') in 0.025538 seconds 
+  Import took 0.028673 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000225 seconds.
+  path: Assets/FBX/log2.fbx
+  artifactKey: Guid(348976bef33be9f4bbc0b8994ad75d50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FBX/log2.fbx using Guid(348976bef33be9f4bbc0b8994ad75d50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62ffdf69a8f3d0f58364f7b0d44b948b') in 0.025759 seconds 
+  Import took 0.028695 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000159 seconds.
+  path: Assets/FBX/log1.fbx
+  artifactKey: Guid(af8126c886fed054eb5467da84dcf77c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FBX/log1.fbx using Guid(af8126c886fed054eb5467da84dcf77c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42c102d66ea4a12c5c237c692a86d69e') in 0.020216 seconds 
+  Import took 0.022832 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000165 seconds.
+  path: Assets/FBX/tocon1.fbx
+  artifactKey: Guid(0ca99f3b12e264d479640046919135e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FBX/tocon1.fbx using Guid(0ca99f3b12e264d479640046919135e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02fe66407bfcec7b646a15016dcc2683') in 0.021233 seconds 
+  Import took 0.023965 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
