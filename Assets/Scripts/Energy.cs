@@ -7,7 +7,12 @@ public class Energy : MonoBehaviour
     public int CurrentEnergy;
     public int MaxEnergy;
     public int MinEnergy;
+    public EnergyBar EnergyBar;
 
+    private void Start()
+    {
+        EnergyBar.MaxEnergy(MaxEnergy, CurrentEnergy); 
+    }
     private void Update()
     {
         CheckEnergy();
@@ -30,5 +35,6 @@ public class Energy : MonoBehaviour
     public void ChangeEnergy (int EnergyChange)
     {
         CurrentEnergy += EnergyChange;
+        EnergyBar.SetEnergy(CurrentEnergy);
     }
 }

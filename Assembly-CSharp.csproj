@@ -65,14 +65,15 @@
     <Compile Include="Assets\Scripts\ThrowObject.cs" />
     <Compile Include="Assets\Scripts\BushHide.cs" />
     <Compile Include="Assets\Scripts\WaypointMover.cs" />
+    <Compile Include="Assets\Scripts\Energy.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\DestroyCandy.cs" />
     <Compile Include="Assets\Scripts\AdultController.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
+    <Compile Include="Assets\Scripts\Dash.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />
-    <Compile Include="Assets\Scripts\Dash.cs" />
-    <Compile Include="Assets\Scripts\Energy.cs" />
+    <Compile Include="Assets\Scripts\EnergyBar.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
