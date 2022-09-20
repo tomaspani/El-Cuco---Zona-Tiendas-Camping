@@ -4,15 +4,49 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField]
+    private AudioClip[] sfx;
+
+    public float mainVolume;
+    public float sfxVolume;
+
+    public void Start()
     {
-        
+        GetComponent<AudioSource>().volume = mainVolume;
+        GetComponent<AudioSource>().Play();
     }
 
-    // Update is called once per frame
-    void Update()
+
+    public void playSound(string name)
     {
-        
+        for (int i = 0; i < sfx.Length; i++)
+        {
+            if (sfx[i].name == name)
+            {
+                if (GameObject.Find(name) == null)
+                {
+                    GameObject soundGameObject = new GameObject(name);
+                    AudioSource audioSource = soundGameObject.AddComponent<AudioSource>();
+                    audioSource.volume = sfxVolume;
+                    audioSource.PlayOneShot(sfx[i]);
+
+
+                }
+                else
+                {
+                    if (!GameObject.Find(name).GetComponent<AudioSource>().isPlaying)
+                    {
+                        GameObject.Find(name).GetComponent<AudioSource>().PlayOneShot(sfx[i]);
+                    }
+
+                }
+            }
+
+        }
+
+
+
+
+
     }
 }

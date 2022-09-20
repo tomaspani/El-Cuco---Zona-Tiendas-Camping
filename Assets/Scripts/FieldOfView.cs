@@ -10,6 +10,7 @@ public class FieldOfView : MonoBehaviour
     [Range(0,360)]
     public float angle;
 
+    SoundManager soundManager;
     
 
     public GameObject playerRef;
@@ -17,6 +18,11 @@ public class FieldOfView : MonoBehaviour
     public LayerMask targetMask, obstructionMask;
 
     public bool canSeePlayer, seesPlayer = false;
+
+    private void Awake()
+    {
+        soundManager = FindObjectOfType<SoundManager>();
+    }
 
     private void Start()
     {
@@ -78,10 +84,7 @@ public class FieldOfView : MonoBehaviour
             seesPlayer = false;
             alertRadius = 2.5f;
         }
-            
-
-
-        
+ 
     }
 
 
@@ -111,5 +114,34 @@ public class FieldOfView : MonoBehaviour
         else if (seesPlayer)
             seesPlayer = false;
 
+    }
+    //CHEQUEO SFX
+    bool checkitSus;
+    bool checkitAlert;
+    
+    void Update()
+    {
+        if (canSeePlayer != checkitSus)
+        {
+            checkitSus = canSeePlayer;
+
+            print("canseeplayer has changed to: " + canSeePlayer);
+            if (canSeePlayer == true && seesPlayer == false)
+            {
+                soundManager.playSound("sus");
+            }
+        }
+
+        if (seesPlayer != checkitAlert)
+        {
+            checkitAlert = seesPlayer;
+
+            print("seesPlayer has changed to: " + seesPlayer);
+            if (seesPlayer == true && canSeePlayer == true)
+            {
+                soundManager.playSound("alert");
+
+            }
+        }
     }
 }
