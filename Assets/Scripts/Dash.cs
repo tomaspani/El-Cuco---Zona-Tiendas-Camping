@@ -11,6 +11,7 @@ public class Dash : MonoBehaviour
     private PlayerMovement Pm;
     private Energy Energy;
     private Consume consume;
+    [SerializeField] GameObject particleEffect;
 
     [Header("Dashing")]
     public float dashSpeed;
@@ -32,8 +33,9 @@ public class Dash : MonoBehaviour
         Pm = GetComponent<PlayerMovement>();
         Energy = GetComponent<Energy>();
         consume = GetComponent<Consume>();
+        particleEffect = GameObject.FindGameObjectWithTag("SpeedEffect");
+        particleEffect.SetActive(false);
     }
-
     private void Update()
     {
         DashTimer();
@@ -52,6 +54,7 @@ public class Dash : MonoBehaviour
     {
         
         isDashing = true;
+        particleEffect.SetActive(true);
         Vector3 forceToApply = orientation.forward * dashSpeed + orientation.up * dashUpwardForce;
         rb.AddForce(forceToApply, ForceMode.Impulse);
         
@@ -72,6 +75,6 @@ public class Dash : MonoBehaviour
     void ResetDash ()
     {
         isDashing = false;
-
+        particleEffect.SetActive(false);
     }
 }

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - bush
   - Candy
+  - SpeedEffect
   layers:
   - Default
   - TransparentFX
