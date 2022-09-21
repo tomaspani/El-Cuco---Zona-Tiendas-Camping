@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement")]
     [SerializeField] private float _moveSpeed;
+    public float DashSpeed;
 
     public float groundDrag;
 
@@ -22,10 +23,12 @@ public class PlayerMovement : MonoBehaviour
 
     Rigidbody myRb;
 
+    private Dash dash;
     private void Start()
     {
         myRb = GetComponent<Rigidbody>();
         myRb.freezeRotation = true;
+        dash = GetComponent<Dash>();
     }
 
     private void Update()
@@ -65,11 +68,12 @@ public class PlayerMovement : MonoBehaviour
 
         Vector3 flatVel = new Vector3(myRb.velocity.x, 0f, myRb.velocity.z);
 
-        if (flatVel.magnitude > _moveSpeed)
+        if (flatVel.magnitude > _moveSpeed && !dash.isDashing)
         {
             Vector3 limitedVel = flatVel.normalized * _moveSpeed;
             myRb.velocity = new Vector3(limitedVel.x, myRb.velocity.y, limitedVel.z);
         }
+       
     }
 
 }

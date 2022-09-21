@@ -15,6 +15,8 @@ public class Dash : MonoBehaviour
     public float dashSpeed;
     public float dashUpwardForce;
     public float dashDuration;
+    public bool isDashing;
+
     [Header("Cooldowns")]
     public float dashCD;
     public float dashCDTimer;
@@ -32,26 +34,42 @@ public class Dash : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(dashkey) && (Energy.CurrentEnergy - EnergyCost >= 0))
+        DashTimer();
+
+        if (Input.GetKeyDown(dashkey) && (Energy.CurrentEnergy - EnergyCost >= 0) && !isDashing && dashCD <= 0)
         {
-            StartCoroutine(Dashing());
+            Dashing();
         }
     }
-    IEnumerator Dashing()
-    {
-        Energy.ChangeEnergy(-EnergyCost);
-        float startTime = Time.time;
-        while (Time.time < startTime + dashDuration)
-        {
-            transform.Translate(Vector3.forward * dashSpeed);
 
-            yield return null;
-        }
+    public void DashTimer()
+    {
+        dashCD -= Time.deltaTime;
+    }
+    public void Dashing()
+    {
+        
+        isDashing = true;
+        Vector3 forceToApply = orientation.forward * dashSpeed + orientation.up * dashUpwardForce;
+        rb.AddForce(forceToApply, ForceMode.Impulse);
+        
+        Invoke(nameof(ResetDash), dashDuration);
+        dashCD = dashCDTimer;
+        Energy.ChangeEnergy(-EnergyCost);
+        
+        //float startTime = Time.time;
+        //while (Time.time < startTime + dashDuration)
+        //{
+        //    transform.Translate(Vector3.forward * dashSpeed);
+
+        //    yield return null;
+        //}
 
     }
 
     void ResetDash ()
     {
+        isDashing = false;
 
     }
 }
