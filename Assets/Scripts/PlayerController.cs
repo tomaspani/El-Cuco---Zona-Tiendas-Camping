@@ -7,29 +7,16 @@ public class PlayerController : MonoBehaviour
 {
 
     public float suspicion;
-    public int kidnappedKids; 
+    public int kidnappedKids;
+    public int kidsInBag;
     public Text text;
     public bool isHidden;
 
-
-    void Kidnap (KidController kid)
+    public void SnatchKid(KidController kid)
     {
         kidnappedKids++;
+        kidsInBag++;
         kid.kidnap();
-    }
-
-    private void OnTriggerStay(Collider other)
-    {
-        if (other.tag == "kid")
-        {
-            Debug.Log("hola soy un nene");
-            if (Input.GetKeyDown(KeyCode.Mouse1) && other.GetComponent<KidController>().isKidnapable)
-            {
-                Debug.Log("a que no me secuestras xd");
-                Kidnap(other.GetComponent<KidController>());
-            }
-        }
-        
     }
 
     public void addSuspicion(float val)
@@ -44,6 +31,17 @@ public class PlayerController : MonoBehaviour
         {
             suspicion = 0f;
         }
+    }
+
+    public void Consume()
+    {
+        kidsInBag = 0;
+    }
+
+    public Vector3 lastPosition()
+    {
+        return this.transform.position;
+
     }
 
 }

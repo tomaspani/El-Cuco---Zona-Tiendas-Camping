@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db16afff58296ab4d84d5d1e8d3bc64a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DestroyCD: 10
+  DestroyCD: 5
   MaxDestroyCD: 0
 --- !u!65 &4028380421268828627
 BoxCollider:

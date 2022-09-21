@@ -23,7 +23,7 @@ public class BushHide : MonoBehaviour
     {
         if(other.gameObject.tag == "bush")
         {
-            other.gameObject.layer = hidden;
+            //other.gameObject.layer = hidden;
             playerRef.isHidden = true;
         }
        
@@ -33,7 +33,7 @@ public class BushHide : MonoBehaviour
     {
         if(other.gameObject.tag == "bush")
         {
-            other.gameObject.layer = notHidden;
+            //other.gameObject.layer = notHidden;
             playerRef.isHidden = false;
         }
         

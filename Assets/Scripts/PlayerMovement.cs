@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
 
     private float _horizontalInput, _verticalInput;
     private Vector3 moveDirection;
+    private Consume _consume;
 
     Rigidbody myRb;
 
@@ -29,13 +30,15 @@ public class PlayerMovement : MonoBehaviour
         myRb = GetComponent<Rigidbody>();
         myRb.freezeRotation = true;
         dash = GetComponent<Dash>();
+        _consume = GetComponent<Consume>();
     }
 
     private void Update()
     {
         _grounded = Physics.Raycast(transform.position, Vector3.down, _playerHeight * 0.5f + 0.2f, ground);
 
-        MyInput();
+        if(_consume.isConsuming == false)
+            MyInput();
         SpeedControl();
 
         if (_grounded)
@@ -46,7 +49,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        MovePlayer();
+        if (_consume.isConsuming == false)
+            MovePlayer();
     }
 
     private void MyInput()

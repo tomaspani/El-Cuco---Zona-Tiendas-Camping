@@ -19,7 +19,7 @@ public class KidController : MonoBehaviour
         if(other.gameObject.tag == "Player")
         {
             isKidnapable = true;
-            feedback.text = "Press 'Mouse RB' to kidnap (no implementado)";
+            feedback.text = "Press 'K' to kidnap";
         }
         
     }
@@ -29,7 +29,7 @@ public class KidController : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             isKidnapable = true;
-            feedback.text = "Press 'Mouse RB' to kidnap (no implementado)";
+            feedback.text = "Press 'K' to kidnap";
         }
         
     }

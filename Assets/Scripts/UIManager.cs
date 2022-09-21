@@ -7,6 +7,7 @@ public class UIManager : MonoBehaviour
 {
     public Slider sus;
     public Text candy;
+    public Text kidsInBag;
     public Image stealth;
     public float timeMax;
 
@@ -27,7 +28,9 @@ public class UIManager : MonoBehaviour
     {
         sus.value = player.suspicion;
         candy.text = "Candies: " + candieMan.Candies;
-                
+        kidsInBag.text = "Kids in the Bag: " + player.kidsInBag;
+
+
     }
 
     private void FixedUpdate()

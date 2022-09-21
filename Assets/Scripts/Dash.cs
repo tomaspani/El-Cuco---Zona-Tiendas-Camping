@@ -10,6 +10,7 @@ public class Dash : MonoBehaviour
     private Rigidbody rb;
     private PlayerMovement Pm;
     private Energy Energy;
+    private Consume consume;
 
     [Header("Dashing")]
     public float dashSpeed;
@@ -30,13 +31,14 @@ public class Dash : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         Pm = GetComponent<PlayerMovement>();
         Energy = GetComponent<Energy>();
+        consume = GetComponent<Consume>();
     }
 
     private void Update()
     {
         DashTimer();
 
-        if (Input.GetKeyDown(dashkey) && (Energy.CurrentEnergy - EnergyCost >= 0) && !isDashing && dashCD <= 0)
+        if (Input.GetKeyDown(dashkey) && (Energy.CurrentEnergy - EnergyCost >= 0) && !isDashing && dashCD <= 0 && consume.isConsuming == false)
         {
             Dashing();
         }

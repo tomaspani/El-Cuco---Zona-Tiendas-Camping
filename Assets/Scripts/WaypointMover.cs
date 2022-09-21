@@ -11,6 +11,8 @@ public class WaypointMover : MonoBehaviour
 
     private Transform currentWaypoint;
 
+    private Vector3 lastPosition;
+
     private FieldOfView _fov;
 
 
@@ -44,7 +46,8 @@ public class WaypointMover : MonoBehaviour
         }
         CanSeePlayer();
         
-        
+
+
     }
 
     private void CanSeePlayer()
@@ -75,6 +78,7 @@ public class WaypointMover : MonoBehaviour
             var targetRotation = Quaternion.LookRotation(_fov.playerRef.transform.position - transform.position);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 2.5f * Time.deltaTime);
             transform.position = Vector3.MoveTowards(transform.position, _fov.playerRef.transform.position, movSpeed * Time.deltaTime);
+            lastPosition = _fov.LastSeenPosition();
         }
         else
         {
@@ -85,6 +89,8 @@ public class WaypointMover : MonoBehaviour
         }
     }
 
+    
+        
 
     private void endWaypoint()
     {

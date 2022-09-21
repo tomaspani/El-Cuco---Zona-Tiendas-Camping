@@ -19,6 +19,10 @@ public class FieldOfView : MonoBehaviour
 
     public bool canSeePlayer, seesPlayer = false;
 
+    bool isPlayerHidden;
+
+    
+
     private void Awake()
     {
         soundManager = FindObjectOfType<SoundManager>();
@@ -42,6 +46,8 @@ public class FieldOfView : MonoBehaviour
         }
     }
 
+    
+
     private void FieldOfViewCheck()
     {
         Collider[] susRangeChecks = Physics.OverlapSphere(transform.position, susRadius, targetMask);
@@ -55,7 +61,7 @@ public class FieldOfView : MonoBehaviour
             {
                 float distanceToTarget = Vector3.Distance(transform.position, susTarget.position);
 
-                if (!Physics.Raycast(transform.position, directionToTarget, distanceToTarget, obstructionMask))
+                if (!Physics.Raycast(transform.position, directionToTarget, distanceToTarget, obstructionMask) && isPlayerHidden == false)
                 {
                     canSeePlayer = true;
                     if (alertRadius < susRadius * 0.9f)
@@ -100,7 +106,7 @@ public class FieldOfView : MonoBehaviour
             {
                 float distanceToTarget = Vector3.Distance(transform.position, alertTarget.position);
 
-                if (!Physics.Raycast(transform.position, directionToTarget, distanceToTarget, obstructionMask))
+                if (!Physics.Raycast(transform.position, directionToTarget, distanceToTarget, obstructionMask) && isPlayerHidden == false )
                 {
                     seesPlayer = true;
                 }
@@ -115,12 +121,38 @@ public class FieldOfView : MonoBehaviour
             seesPlayer = false;
 
     }
-    //CHEQUEO SFX
-    bool checkitSus;
+
+
+    public Vector3 LastSeenPosition()
+    {
+        Vector3 lastSeenPosition;
+        bool checkitIsHidden = false;
+        bool isHidden = playerRef.GetComponent<PlayerController>().isHidden;
+
+        if (isHidden != checkitIsHidden)
+        {
+            checkitIsHidden = isHidden;
+
+            print("isHidden has changed to: " + isHidden);
+            if (isHidden == true)
+            {
+                lastSeenPosition = playerRef.GetComponent<PlayerController>().lastPosition();
+                return lastSeenPosition;
+            }
+        }
+
+        return playerRef.GetComponent<PlayerController>().lastPosition();
+    }
+
+        //----------------------------------------CHEQUEO SFX-----------------------------------------------------------------------------------
+
+        bool checkitSus;
     bool checkitAlert;
     
     void Update()
     {
+        isPlayerHidden = playerRef.GetComponent<PlayerController>().isHidden;
+
         if (canSeePlayer != checkitSus)
         {
             checkitSus = canSeePlayer;
