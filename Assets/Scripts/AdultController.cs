@@ -26,7 +26,6 @@ public class AdultController : MonoBehaviour
             AddAlert(_fov.playerRef, 5f);
         else
             LooseSuspicion(_fov.playerRef);
-      
         
     }
 

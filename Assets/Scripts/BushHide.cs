@@ -6,7 +6,13 @@ public class BushHide : MonoBehaviour
 {
     private int hidden = 7;
     private int notHidden = 8;
-    
+    private PlayerController playerRef;
+
+    private void Start()
+    {
+        playerRef = GetComponent<PlayerController>();
+    }
+
 
     /*private void OnTriggerEnter(Collider other)
     {
@@ -15,11 +21,21 @@ public class BushHide : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        other.gameObject.layer = hidden;
+        if(other.gameObject.tag == "bush")
+        {
+            other.gameObject.layer = hidden;
+            playerRef.isHidden = true;
+        }
+       
     }
 
     private void OnTriggerExit(Collider other)
     {
-        other.gameObject.layer = notHidden;
+        if(other.gameObject.tag == "bush")
+        {
+            other.gameObject.layer = notHidden;
+            playerRef.isHidden = false;
+        }
+        
     }
 }

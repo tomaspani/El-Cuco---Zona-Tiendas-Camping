@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public float suspicion;
     public int kidnappedKids; 
     public Text text;
+    public bool isHidden;
 
 
     void Kidnap (KidController kid)
@@ -31,8 +32,6 @@ public class PlayerController : MonoBehaviour
         
     }
 
-   
-
     public void addSuspicion(float val)
     {
         suspicion += val;
@@ -46,8 +45,5 @@ public class PlayerController : MonoBehaviour
             suspicion = 0f;
         }
     }
-
-
-    
 
 }

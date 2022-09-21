@@ -43,4 +43,7 @@ public class Waypoints : MonoBehaviour
             return transform.GetChild(0);
         }
     }
+
+
+
 }

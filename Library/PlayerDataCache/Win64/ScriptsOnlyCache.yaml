@@ -6,7 +6,10 @@ ScriptsOnlyBuild:
     - BushHide
     - CameraController
     - CameraFollow
+    - Dash
     - DestroyCandy
+    - Energy
+    - EnergyBar
     - FieldOfView
     - FollowCandy
     - GameManager
@@ -14,6 +17,7 @@ ScriptsOnlyBuild:
     - PickUpCandy
     - PlayerController
     - PlayerMovement
+    - SoundManager
     - ThrowObject
     - UIManager
     - WaypointMover
@@ -58,6 +62,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
     - Class: 104
@@ -74,6 +82,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 1636}
     - Class: 114
       Script: {instanceID: 1754}
+    - Class: 114
+      Script: {instanceID: 1812}
     - Class: 114
       Script: {instanceID: 1928}
     - Class: 114
@@ -95,23 +105,29 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3078}
     - Class: 114
-      Script: {instanceID: 3286}
+      Script: {instanceID: 3252}
     - Class: 114
-      Script: {instanceID: 3398}
+      Script: {instanceID: 3288}
     - Class: 114
-      Script: {instanceID: 3546}
+      Script: {instanceID: 3400}
     - Class: 114
-      Script: {instanceID: 3730}
+      Script: {instanceID: 3548}
     - Class: 114
-      Script: {instanceID: 3964}
+      Script: {instanceID: 3678}
     - Class: 114
-      Script: {instanceID: 4060}
+      Script: {instanceID: 3734}
     - Class: 114
-      Script: {instanceID: 4068}
+      Script: {instanceID: 3968}
     - Class: 114
-      Script: {instanceID: 4340}
+      Script: {instanceID: 4064}
     - Class: 114
-      Script: {instanceID: 4370}
+      Script: {instanceID: 4072}
+    - Class: 114
+      Script: {instanceID: 4108}
+    - Class: 114
+      Script: {instanceID: 4346}
+    - Class: 114
+      Script: {instanceID: 4376}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -229,7 +245,7 @@ ScriptsOnlyBuild:
     className: AlertFeedback
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: f1f402bb9dc7b334d026eeb7587d8f0a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SoundManager
@@ -475,6 +491,12 @@ ScriptsOnlyBuild:
     className: PlayModeRunnerCallback
   - hash:
       serializedVersion: 2
+      Hash: 1028c39545bcfa841aaab54121e69a47
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnergyBar
+  - hash:
+      serializedVersion: 2
       Hash: bd3cf68c8964d3c66d1c43f4f98508c9
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -553,6 +575,12 @@ ScriptsOnlyBuild:
     className: ControlTrack
   - hash:
       serializedVersion: 2
+      Hash: fbec0a17f20a7dcc624f31a429808e2c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Energy
+  - hash:
+      serializedVersion: 2
       Hash: 3165968ba45c74472d279ba04455fccb
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -571,7 +599,7 @@ ScriptsOnlyBuild:
     className: ScrollRect
   - hash:
       serializedVersion: 2
-      Hash: 686b45d1fe89873b8f682623334b96ac
+      Hash: 7e1b53b1e6d823c33bb66d39c107e2bd
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
@@ -637,6 +665,12 @@ ScriptsOnlyBuild:
     className: TMP_ScrollbarEventHandler
   - hash:
       serializedVersion: 2
+      Hash: 272e907caa7aa4e752b8e7d86f3d5fb9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Dash
+  - hash:
+      serializedVersion: 2
       Hash: 8220b46879dc5e37db1b940c938f5744
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -655,7 +689,7 @@ ScriptsOnlyBuild:
     className: ActivationPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: 0b2796a678d4e70d35fd1386b98e7882
+      Hash: f44a5bf8f51e0457b55afdaef86d1c12
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UIManager
@@ -671,7 +705,13 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: TouchInputModule
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CucoDetection
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/Alumno/Desktop/El Cuco/El Cuco - Zona Tiendas Camping.exe
+  playerPath: C:/Users/Lucy/Desktop/TestBuild/El Cuco - Zona Tiendas Camping.exe

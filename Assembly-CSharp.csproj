@@ -74,6 +74,7 @@
     <Compile Include="Assets\Scripts\Dash.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />
+    <Compile Include="Assets\Scripts\CucoDetection.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -36,8 +36,10 @@ public class WaypointMover : MonoBehaviour
             if (Vector3.Distance(transform.position, currentWaypoint.position) < distanceThreshold)
             {
                 currentWaypoint = waypoints.getNextWaypoint(currentWaypoint);
-                transform.LookAt(currentWaypoint);
-
+                var targetRotation = Quaternion.LookRotation(currentWaypoint.transform.position - transform.position);
+                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, movSpeed * Time.deltaTime);
+                //transform.LookAt(currentWaypoint);
+                endWaypoint();
             }
         }
         CanSeePlayer();
@@ -50,12 +52,17 @@ public class WaypointMover : MonoBehaviour
         
         if (_fov.canSeePlayer)
         {
-            transform.LookAt(_fov.playerRef.transform);
-            movSpeed = 0.1f;
+            //transform.LookAt(_fov.playerRef.transform);
+            //movSpeed = 0.1f;
+            var targetRotation = Quaternion.LookRotation(_fov.playerRef.transform.position - transform.position);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 2.5f * Time.deltaTime);
+            movSpeed = 0f;
         }
         else { 
             movSpeed = 2.5f;
-            transform.LookAt(currentWaypoint);
+            var targetRotation = Quaternion.LookRotation(currentWaypoint.transform.position - transform.position);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, movSpeed * Time.deltaTime);
+            //transform.LookAt(currentWaypoint);
         }
     }
 
@@ -65,14 +72,23 @@ public class WaypointMover : MonoBehaviour
         {
             movSpeed = 1.5f;
             _fov.alertRadius = -_fov.susRadius;
-            transform.LookAt(_fov.playerRef.transform);
+            var targetRotation = Quaternion.LookRotation(_fov.playerRef.transform.position - transform.position);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 2.5f * Time.deltaTime);
             transform.position = Vector3.MoveTowards(transform.position, _fov.playerRef.transform.position, movSpeed * Time.deltaTime);
         }
         else
         {
             movSpeed = 2.5f;
-            transform.LookAt(currentWaypoint);
+            var targetRotation = Quaternion.LookRotation(currentWaypoint.transform.position - transform.position);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, movSpeed * Time.deltaTime);
+            //transform.LookAt(currentWaypoint);
         }
+    }
+
+
+    private void endWaypoint()
+    {
+        //
     }
 
     
