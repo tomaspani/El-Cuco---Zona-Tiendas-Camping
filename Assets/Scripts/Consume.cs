@@ -7,6 +7,7 @@ public class Consume : MonoBehaviour
 {
     private Energy _energy;
     private PlayerController _player;
+    private SoundManager _sound;
 
     public int restoreEnergy;
     public float maxTimer;
@@ -19,6 +20,7 @@ public class Consume : MonoBehaviour
     {
         _energy = GetComponent<Energy>();
         _player = GetComponent<PlayerController>();
+        _sound = FindObjectOfType<SoundManager>();
         timer.gameObject.SetActive(false);
 
     }
@@ -34,16 +36,17 @@ public class Consume : MonoBehaviour
                 isConsuming = true;
                 counter += Time.deltaTime;
                 timer.value = counter;
-                Debug.Log(counter);
+                _sound.PlaySound("eating");
             }
             else if(counter > maxTimer)
             {
-                Debug.Log(counter);
                 ConsumeKids(_player.kidsInBag, restoreEnergy);
                 timer.gameObject.SetActive(false);
                 isConsuming = false;
+                _sound.StopSound("eating");
+
             }
-            
+
         }
         else
         {
@@ -51,6 +54,7 @@ public class Consume : MonoBehaviour
             counter = 0f;
             timer.gameObject.SetActive(false);
             isConsuming = false;
+            _sound.StopSound("eating");
         }
     }
 

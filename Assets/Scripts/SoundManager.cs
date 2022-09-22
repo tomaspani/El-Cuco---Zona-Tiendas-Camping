@@ -17,7 +17,7 @@ public class SoundManager : MonoBehaviour
     }
 
 
-    public void playSound(string name)
+    public void PlaySound(string name)
     {
         for (int i = 0; i < sfx.Length; i++)
         {
@@ -44,9 +44,23 @@ public class SoundManager : MonoBehaviour
 
         }
 
+        
+
+    }
 
 
+    public void StopSound(string name)
+    {
+        if(GameObject.Find(name) != null)
+        {
+            GameObject soundGameObject = GameObject.Find(name);
+            if (soundGameObject.GetComponent<AudioSource>().isPlaying)
+            {
+                Debug.Log("debug");
+                soundGameObject.GetComponent<AudioSource>().Stop();
 
-
+            }
+        }
+            
     }
 }

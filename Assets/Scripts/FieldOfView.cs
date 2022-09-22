@@ -160,7 +160,7 @@ public class FieldOfView : MonoBehaviour
             print("canseeplayer has changed to: " + canSeePlayer);
             if (canSeePlayer == true && seesPlayer == false)
             {
-                soundManager.playSound("sus");
+                soundManager.PlaySound("sus");
             }
         }
 
@@ -171,7 +171,7 @@ public class FieldOfView : MonoBehaviour
             print("seesPlayer has changed to: " + seesPlayer);
             if (seesPlayer == true && canSeePlayer == true)
             {
-                soundManager.playSound("alert");
+                soundManager.PlaySound("alert");
 
             }
         }

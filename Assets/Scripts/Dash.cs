@@ -27,6 +27,9 @@ public class Dash : MonoBehaviour
     [Header("Input")]
     public KeyCode dashkey;
 
+
+    private SoundManager _sound;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -35,6 +38,7 @@ public class Dash : MonoBehaviour
         consume = GetComponent<Consume>();
         particleEffect = GameObject.FindGameObjectWithTag("SpeedEffect");
         particleEffect.SetActive(false);
+        _sound = FindObjectOfType<SoundManager>();
     }
     private void Update()
     {
@@ -43,6 +47,7 @@ public class Dash : MonoBehaviour
         if (Input.GetKeyDown(dashkey) && (Energy.CurrentEnergy - EnergyCost >= 0) && !isDashing && dashCD <= 0 && consume.isConsuming == false)
         {
             Dashing();
+            _sound.PlaySound("dash");
         }
     }
 
@@ -54,10 +59,9 @@ public class Dash : MonoBehaviour
     {
         
         isDashing = true;
-        particleEffect.SetActive(true);
         Vector3 forceToApply = orientation.forward * dashSpeed + orientation.up * dashUpwardForce;
         rb.AddForce(forceToApply, ForceMode.Impulse);
-        
+        particleEffect.SetActive(true);
         Invoke(nameof(ResetDash), dashDuration);
         dashCD = dashCDTimer;
         Energy.ChangeEnergy(-EnergyCost);
@@ -76,5 +80,6 @@ public class Dash : MonoBehaviour
     {
         isDashing = false;
         particleEffect.SetActive(false);
+        _sound.StopSound("dash");
     }
 }
