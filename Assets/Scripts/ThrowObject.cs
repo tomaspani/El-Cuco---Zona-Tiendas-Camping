@@ -18,6 +18,7 @@ public class ThrowObject : MonoBehaviour
     public float ThrowForce;
     public float ThrowUpwardForce;
     public bool CanThrow;
+    public LayerMask BushMask;
 
 
     private void Start()
@@ -51,7 +52,7 @@ public class ThrowObject : MonoBehaviour
         Vector3 ForceDirection = cam.transform.forward;
 
         RaycastHit Hit;
-        if (Physics.Raycast(cam.position, cam.forward, out Hit, 500f))
+        if (Physics.Raycast(cam.position, cam.forward, out Hit, 500f, BushMask))
         {
             ForceDirection = (Hit.point - AttackPoint.position).normalized;
         }

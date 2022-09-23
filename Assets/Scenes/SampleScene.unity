@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.43667555, g: 0.48427176, b: 0.5645241, a: 1}
+  m_IndirectSpecularColor: {r: 0.4366757, g: 0.48427194, b: 0.5645252, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2382,6 +2382,9 @@ MonoBehaviour:
   ThrowForce: 10
   ThrowUpwardForce: 0
   CanThrow: 0
+  BushMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!136 &532618751
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13104,6 +13107,10 @@ PrefabInstance:
     - target: {fileID: 4566792573442331016, guid: 6370088aab3db92429d485f386a5115c, type: 3}
       propertyPath: targetMask.m_Bits
       value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 4566792573442331016, guid: 6370088aab3db92429d485f386a5115c, type: 3}
+      propertyPath: obstructionMask.m_Bits
+      value: 384
       objectReference: {fileID: 0}
     - target: {fileID: 4566792573442331017, guid: 6370088aab3db92429d485f386a5115c, type: 3}
       propertyPath: m_Name

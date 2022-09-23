@@ -15,7 +15,8 @@ public class FieldOfView : MonoBehaviour
 
     public GameObject playerRef;
 
-    public LayerMask targetMask, obstructionMask;
+    public LayerMask targetMask;
+    public LayerMask obstructionMask;
 
     public bool canSeePlayer, seesPlayer = false;
 
