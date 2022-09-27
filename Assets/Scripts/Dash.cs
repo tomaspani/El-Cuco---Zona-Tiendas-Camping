@@ -65,14 +65,7 @@ public class Dash : MonoBehaviour
         Invoke(nameof(ResetDash), dashDuration);
         dashCD = dashCDTimer;
         Energy.ChangeEnergy(-EnergyCost);
-        
-        //float startTime = Time.time;
-        //while (Time.time < startTime + dashDuration)
-        //{
-        //    transform.Translate(Vector3.forward * dashSpeed);
-
-        //    yield return null;
-        //}
+       
 
     }
 
