@@ -26,6 +26,7 @@ public class SoundManager : MonoBehaviour
                 if (GameObject.Find(name) == null)
                 {
                     GameObject soundGameObject = new GameObject(name);
+                    soundGameObject.transform.position = this.transform.position;
                     AudioSource audioSource = soundGameObject.AddComponent<AudioSource>();
                     audioSource.volume = sfxVolume;
                     audioSource.PlayOneShot(sfx[i]);

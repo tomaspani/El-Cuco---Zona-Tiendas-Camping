@@ -163,6 +163,8 @@ public class FieldOfView : MonoBehaviour
             {
                 soundManager.PlaySound("sus");
             }
+            else
+                soundManager.StopSound("sus");
         }
 
         if (seesPlayer != checkitAlert)
@@ -175,6 +177,8 @@ public class FieldOfView : MonoBehaviour
                 soundManager.PlaySound("alert");
 
             }
+            else
+                soundManager.StopSound("alert");
         }
     }
 }

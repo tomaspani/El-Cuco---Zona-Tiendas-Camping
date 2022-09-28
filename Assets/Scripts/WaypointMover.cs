@@ -102,15 +102,21 @@ public class WaypointMover : MonoBehaviour
 
     void ChangeWaypoint()
     {
-
-        _currentWaypointIndex += 1;
-        if (_currentWaypointIndex > _waypoints.Count)
+        Debug.Log(_currentWaypointIndex);
+        Debug.Log(_waypoints.Count);
+        if (_currentWaypointIndex < _waypoints.Count-1)
+        {
+            _currentWaypointIndex += 1;
+        }
+        else
         {
             _currentWaypointIndex = 0;
         }
-        _currentWaypoint = _waypoints[_currentWaypointIndex];
 
+        _currentWaypoint = _waypoints[_currentWaypointIndex];
         _navMeshAgent.SetDestination(_currentWaypoint.position);
+
+
 
     }
     private void endWaypoint()
