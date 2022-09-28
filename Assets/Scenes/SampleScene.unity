@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.09289036, g: 0.1182066, b: 0.15339512, a: 1}
+  m_IndirectSpecularColor: {r: 0.092888705, g: 0.11820384, b: 0.15339425, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -12721,6 +12721,10 @@ PrefabInstance:
       propertyPath: waypoints
       value: 
       objectReference: {fileID: 266448213}
+    - target: {fileID: 4566792573442331021, guid: 6370088aab3db92429d485f386a5115c, type: 3}
+      propertyPath: _currentWaypoint
+      value: 
+      objectReference: {fileID: 139057124}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6370088aab3db92429d485f386a5115c, type: 3}
 --- !u!4 &1778388523 stripped
@@ -14249,6 +14253,10 @@ PrefabInstance:
       propertyPath: waypoints
       value: 
       objectReference: {fileID: 139057123}
+    - target: {fileID: 4566792573442331021, guid: 6370088aab3db92429d485f386a5115c, type: 3}
+      propertyPath: _currentWaypoint
+      value: 
+      objectReference: {fileID: 266448214}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6370088aab3db92429d485f386a5115c, type: 3}
 --- !u!4 &4566792573512787866 stripped
