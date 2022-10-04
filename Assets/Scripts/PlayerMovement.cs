@@ -25,6 +25,9 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody myRb;
 
     private Dash dash;
+
+   
+
     private void Start()
     {
         myRb = GetComponent<Rigidbody>();
