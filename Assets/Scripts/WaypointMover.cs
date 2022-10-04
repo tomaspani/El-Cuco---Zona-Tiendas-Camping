@@ -13,6 +13,14 @@ public class WaypointMover : MonoBehaviour
     public FieldOfView _fov;
     [Header("Values")]
     public float _distanceToCheck;
+    public List<Transform> _positionsToCheck = new List<Transform>();
+    [SerializeField]Transform currentWatchPosition;
+    public float _lookingTime;
+    [SerializeField] int _currentWatchPositionIndex;
+    public bool IsLookingAround;
+    Quaternion CheckPositionRotation;
+    float counter = 0;
+
     //[SerializeField] private Waypoints waypoints;
 
     [SerializeField] private float movSpeed = 5f;
@@ -25,11 +33,10 @@ public class WaypointMover : MonoBehaviour
     {
         _fov = this.GetComponent<FieldOfView>();
         _navMeshAgent = GetComponent<NavMeshAgent>();
-        _currentWaypointIndex = 0;
         ChangeWaypoint();
         _navMeshAgent.isStopped = false;
         transform.position = _waypoints[0].position;
-        
+        currentWatchPosition = _positionsToCheck[0];
       
         
     }
@@ -45,11 +52,16 @@ public class WaypointMover : MonoBehaviour
             _navMeshAgent.isStopped = false;
             if (distanceToWaypoint <= _distanceToCheck)
             {
-                ChangeWaypoint();
-                var targetRotation = Quaternion.LookRotation(_currentWaypoint.transform.position - transform.position);
-                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, movSpeed * Time.deltaTime);
-                //transform.LookAt(currentWaypoint);
-                endWaypoint();
+                IsLookingAround = true;
+                ChangeLookPosition();
+                    //Invoke(nameof(ChangeLookPosition), _lookingTime);
+                
+
+                if (!IsLookingAround) 
+                { 
+                    ChangeWaypoint(); 
+                }
+               
             }
         }
         CanSeePlayer();
@@ -102,8 +114,8 @@ public class WaypointMover : MonoBehaviour
 
     void ChangeWaypoint()
     {
-        Debug.Log(_currentWaypointIndex);
-        Debug.Log(_waypoints.Count);
+        //Debug.Log(_currentWaypointIndex);
+        //Debug.Log(_waypoints.Count);
         if (_currentWaypointIndex < _waypoints.Count-1)
         {
             _currentWaypointIndex += 1;
@@ -115,7 +127,9 @@ public class WaypointMover : MonoBehaviour
 
         _currentWaypoint = _waypoints[_currentWaypointIndex];
         _navMeshAgent.SetDestination(_currentWaypoint.position);
-
+        var targetRotation = Quaternion.LookRotation(_currentWaypoint.transform.position - transform.position);
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, movSpeed * Time.deltaTime);
+        
 
 
     }
@@ -124,5 +138,28 @@ public class WaypointMover : MonoBehaviour
         //
     }
 
+   
     
+    void ChangeLookPosition ()
+    {
+        IsLookingAround = true;
+        _navMeshAgent.isStopped = true;     
+        currentWatchPosition = _positionsToCheck[_currentWatchPositionIndex];
+        CheckPositionRotation = Quaternion.LookRotation(currentWatchPosition.position - transform.position);
+        transform.rotation = Quaternion.Slerp(transform.rotation, CheckPositionRotation, 2.5f * Time.deltaTime);
+        
+        
+        counter += Time.deltaTime;
+        if (counter >= _lookingTime)
+        {
+            _currentWatchPositionIndex += 1;
+            Debug.Log(_currentWatchPositionIndex);
+            counter = 0;
+        }
+        if (_currentWatchPositionIndex >= _positionsToCheck.Count)
+        {
+            IsLookingAround = false;
+            _currentWatchPositionIndex = 0;
+        }
+    }
 }
