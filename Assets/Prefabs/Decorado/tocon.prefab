@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4766042222747715043}
   - component: {fileID: 7332024499706327337}
   - component: {fileID: 8214848081671646639}
+  - component: {fileID: 6161205254338662672}
   m_Layer: 0
   m_Name: tocon
   m_TagString: Untagged
@@ -95,3 +96,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 101.719604, y: 71.36685, z: 92.02985}
   m_Center: {x: 0.000034332275, y: 0, z: -0.000022888184}
+--- !u!208 &6161205254338662672
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9133415629323981052}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 50.86, y: 35.683002, z: 46.015003}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5

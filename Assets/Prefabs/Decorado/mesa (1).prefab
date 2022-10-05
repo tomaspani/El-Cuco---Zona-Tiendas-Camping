@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 3511597821269243832}
   - component: {fileID: 510147048830859293}
   - component: {fileID: 2373572102307843287}
+  - component: {fileID: 2191668914960423766}
+  - component: {fileID: 6688653799331970649}
   m_Layer: 0
   m_Name: mesa (1)
   m_TagString: Untagged
@@ -81,3 +83,32 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!208 &2191668914960423766
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4319061102076472578}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 217.007, y: 78.62701, z: 211.54501}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
+--- !u!65 &6688653799331970649
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4319061102076472578}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 434.01328, y: 157.25432, z: 423.08936}
+  m_Center: {x: 0, y: 0, z: 0}

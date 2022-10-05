@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 681495511912873569}
   - component: {fileID: 4529199676483301828}
   - component: {fileID: 1818896049797399822}
+  - component: {fileID: 6075318941638659590}
+  - component: {fileID: 8948773388850882770}
   m_Layer: 0
   m_Name: fallen tree
   m_TagString: Untagged
@@ -81,3 +83,32 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!208 &6075318941638659590
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 161839462436218075}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 652.65405, y: 111.57201, z: 155.08}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -8.561001, y: 52.127003, z: 0.83800006}
+  m_TimeToStationary: 0.5
+--- !u!65 &8948773388850882770
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 161839462436218075}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1305.308, y: 223.14304, z: 310.15918}
+  m_Center: {x: -8.560821, y: 52.126648, z: 0.83755463}

@@ -147,7 +147,7 @@ public class FieldOfView : MonoBehaviour
 
         //----------------------------------------CHEQUEO SFX-----------------------------------------------------------------------------------
 
-        bool checkitSus;
+    bool checkitSus;
     bool checkitAlert;
     
     void Update()

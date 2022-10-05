@@ -10,13 +10,19 @@ public class PickUpCandy : MonoBehaviour
     {
         Player = GameObject.FindGameObjectWithTag("Player");
     }
-    private void OnTriggerEnter(Collider other)
+
+    private void OnTriggerStay(Collider other)
     {
-        if(other.gameObject.tag == "Player")
+        /*if(other.gameObject.GetComponent<PlayerController>())
         {
+            Debug.Log("debugggggggggg");
             Player.GetComponent<ThrowObject>().Candies += 5;
             Destroy(gameObject);
-        }
-        
+        }*/
+        Debug.Log("debugggggggggg");
+        Player.GetComponent<ThrowObject>().Candies += 5;
+        Destroy(gameObject);
     }
+
+
 }

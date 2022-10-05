@@ -52,8 +52,14 @@ public class FOVCuco : MonoBehaviour
 
                 if (!Physics.Raycast(transform.position, directionToTarget, distanceToTarget, obstructionMask))
                 {
-                    canSnatchKid = true;
                     kidRef = KidTarget.gameObject;
+                    if (kidRef.GetComponent<FOVKid>().canSeeCuco)
+                    {
+                        canSnatchKid = false;
+                    }
+                    else
+                        canSnatchKid = true;
+                    
                 }
                 else
                     canSnatchKid = false;

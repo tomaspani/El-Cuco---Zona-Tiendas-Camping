@@ -64,6 +64,7 @@ public class WaypointMover : MonoBehaviour
                
             }
         }
+
         CanSeePlayer();
         
 
@@ -77,6 +78,7 @@ public class WaypointMover : MonoBehaviour
         {
             //transform.LookAt(_fov.playerRef.transform);
             //movSpeed = 0.1f;
+            
             var targetRotation = Quaternion.LookRotation(_fov.playerRef.transform.position - transform.position);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 2.5f * Time.deltaTime);
             _navMeshAgent.isStopped = true;
@@ -142,12 +144,14 @@ public class WaypointMover : MonoBehaviour
     
     void ChangeLookPosition ()
     {
+
         IsLookingAround = true;
         _navMeshAgent.isStopped = true;     
         currentWatchPosition = _positionsToCheck[_currentWatchPositionIndex];
         CheckPositionRotation = Quaternion.LookRotation(currentWatchPosition.position - transform.position);
         transform.rotation = Quaternion.Slerp(transform.rotation, CheckPositionRotation, 2.5f * Time.deltaTime);
         
+
         
         counter += Time.deltaTime;
         if (counter >= _lookingTime)

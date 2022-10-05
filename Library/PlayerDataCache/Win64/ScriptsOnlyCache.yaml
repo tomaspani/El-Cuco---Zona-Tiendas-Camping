@@ -12,6 +12,7 @@ ScriptsOnlyBuild:
     - Energy
     - EnergyBar
     - FOVCuco
+    - FOVKid
     - FieldOfView
     - FollowCandy
     - GameManager
@@ -19,6 +20,7 @@ ScriptsOnlyBuild:
     - PickUpCandy
     - PlayerController
     - PlayerMovement
+    - PositionsFollowAdult
     - SoundManager
     - ThrowObject
     - UIManager
@@ -82,63 +84,67 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1490}
     - Class: 114
-      Script: {instanceID: 1702}
+      Script: {instanceID: 1756}
     - Class: 114
-      Script: {instanceID: 1876}
+      Script: {instanceID: 1930}
     - Class: 114
-      Script: {instanceID: 1888}
+      Script: {instanceID: 1942}
     - Class: 114
-      Script: {instanceID: 2022}
+      Script: {instanceID: 2076}
     - Class: 114
-      Script: {instanceID: 2092}
+      Script: {instanceID: 2146}
     - Class: 114
-      Script: {instanceID: 2224}
+      Script: {instanceID: 2278}
     - Class: 114
-      Script: {instanceID: 2326}
+      Script: {instanceID: 2380}
     - Class: 114
-      Script: {instanceID: 2344}
+      Script: {instanceID: 2398}
     - Class: 114
-      Script: {instanceID: 2392}
+      Script: {instanceID: 2446}
     - Class: 114
-      Script: {instanceID: 2666}
+      Script: {instanceID: 2720}
     - Class: 114
-      Script: {instanceID: 2796}
+      Script: {instanceID: 2850}
     - Class: 114
-      Script: {instanceID: 2898}
+      Script: {instanceID: 2952}
     - Class: 114
-      Script: {instanceID: 3220}
+      Script: {instanceID: 3274}
     - Class: 114
-      Script: {instanceID: 3334}
+      Script: {instanceID: 3388}
     - Class: 114
-      Script: {instanceID: 3548}
+      Script: {instanceID: 3602}
     - Class: 114
-      Script: {instanceID: 3650}
+      Script: {instanceID: 3704}
     - Class: 114
-      Script: {instanceID: 3860}
+      Script: {instanceID: 3914}
     - Class: 114
-      Script: {instanceID: 3902}
+      Script: {instanceID: 3956}
     - Class: 114
-      Script: {instanceID: 4026}
+      Script: {instanceID: 4080}
     - Class: 114
-      Script: {instanceID: 4236}
+      Script: {instanceID: 4290}
     - Class: 114
-      Script: {instanceID: 4406}
+      Script: {instanceID: 4460}
     - Class: 114
-      Script: {instanceID: 4476}
+      Script: {instanceID: 4530}
     - Class: 114
-      Script: {instanceID: 4752}
+      Script: {instanceID: 4806}
     - Class: 114
-      Script: {instanceID: 4860}
+      Script: {instanceID: 4914}
     - Class: 114
-      Script: {instanceID: 4870}
+      Script: {instanceID: 4924}
     - Class: 114
-      Script: {instanceID: 4916}
+      Script: {instanceID: 4970}
     - Class: 114
-      Script: {instanceID: 5202}
+      Script: {instanceID: 5110}
     - Class: 114
-      Script: {instanceID: 5242}
+      Script: {instanceID: 5258}
     - Class: 114
-      Script: {instanceID: 5296}
+      Script: {instanceID: 5298}
+    - Class: 114
+      Script: {instanceID: 5352}
+    - Class: 114
+      Script: {instanceID: 106160}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -146,6 +152,10 @@ ScriptsOnlyBuild:
     - Class: 135
       Script: {instanceID: 0}
     - Class: 136
+      Script: {instanceID: 0}
+    - Class: 154
+      Script: {instanceID: 0}
+    - Class: 156
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -161,6 +171,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
+    - Class: 218
+      Script: {instanceID: 0}
     - Class: 222
       Script: {instanceID: 0}
     - Class: 223
@@ -170,6 +182,8 @@ ScriptsOnlyBuild:
     - Class: 238
       Script: {instanceID: 0}
     - Class: 850595691
+      Script: {instanceID: 0}
+    - Class: 1953259897
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -498,7 +512,7 @@ ScriptsOnlyBuild:
     className: ContentSizeFitter
   - hash:
       serializedVersion: 2
-      Hash: 7b350c0bbad5bf3d4f97743e07ab9fc4
+      Hash: 40c51d989be9bee3c78ace1ad29660ce
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: KidController
@@ -630,7 +644,7 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
-      Hash: 8249e9a44a9c24420495312f163bcfff
+      Hash: d2afe3a9e4bccbbb3e9aa08710587a4d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: WaypointMover
@@ -744,6 +758,12 @@ ScriptsOnlyBuild:
     className: Dash
   - hash:
       serializedVersion: 2
+      Hash: 307d25a1df172e3f90e137163938bdfc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PositionsFollowAdult
+  - hash:
+      serializedVersion: 2
       Hash: 8220b46879dc5e37db1b940c938f5744
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -790,6 +810,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: TouchInputModule
+  - hash:
+      serializedVersion: 2
+      Hash: 114b96d05c4e2727c96f851ef48cdf39
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FOVKid
   platform: 19
   scenePathNames:
   - Assets/Scenes/NavMeshTesting.unity
