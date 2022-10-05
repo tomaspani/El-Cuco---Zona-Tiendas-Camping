@@ -12,10 +12,12 @@ public class KidController : MonoBehaviour
 
     private FOVKid _fov;
     private bool _canSeeCuco;
+    private SoundManager _soundMan;
 
     private void Start()
     {
         _fov = GetComponent<FOVKid>();
+        _soundMan = FindObjectOfType<SoundManager>();
     }
 
     private void Update()
@@ -31,7 +33,7 @@ public class KidController : MonoBehaviour
         if(other.gameObject.tag == "Player" && _canSeeCuco == false)
         {
             isKidnapable = true;
-            feedback.text = "Press '1' to kidnap";
+            feedback.text = "Press Left Click to Kidnap";
         }
         
     }
@@ -41,7 +43,7 @@ public class KidController : MonoBehaviour
         if (other.gameObject.tag == "Player" && _canSeeCuco == false)
         {
             isKidnapable = true;
-            feedback.text = "Press '1' to kidnap";
+            feedback.text = "Press Left Click to Kidnap";
         }
         
     }
@@ -61,6 +63,7 @@ public class KidController : MonoBehaviour
     {
         if (isKidnapable)
         {
+            _soundMan.PlaySound("kidnap");
             Debug.Log("me secuestraron lol");
             feedback.text = "";
             Destroy(this.gameObject);

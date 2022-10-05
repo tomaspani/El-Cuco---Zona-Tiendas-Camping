@@ -41,7 +41,7 @@ public class AdultController : MonoBehaviour
 
     public void LooseSuspicion(GameObject player)
     {
-        player.GetComponent<PlayerController>().looseSuspicion(suspcionValue / 2f  * Time.deltaTime);
+        player.GetComponent<PlayerController>().LooseSuspicion(suspcionValue / 8f  * Time.deltaTime);
     }
 
 

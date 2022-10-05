@@ -21,7 +21,7 @@ public class FOVKid : MonoBehaviour
 
     private void Start()
     {
-        player = GetComponent<PlayerController>();
+        player = FindObjectOfType<PlayerController>();
         _soundMan = FindObjectOfType<SoundManager>();
         StartCoroutine(FOVRoutine());
     }
@@ -89,6 +89,7 @@ public class FOVKid : MonoBehaviour
             print("canseeplayer has changed to: " + canSeeCuco);
             if (canSeeCuco == true)
             {
+                player.addSuspicion(30);
                 _soundMan.PlaySound("kidScream");
             }
             //else

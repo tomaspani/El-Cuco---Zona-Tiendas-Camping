@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour
         suspicion += val;
     }
 
-    public void looseSuspicion(float val)
+    public void LooseSuspicion(float val)
     {
         suspicion -= val;
         if(suspicion < 0f)

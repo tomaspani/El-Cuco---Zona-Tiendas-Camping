@@ -79,7 +79,7 @@ public class FOVCuco : MonoBehaviour
         if(canSnatchKid == true)
         {
             Debug.Log("Puedo secuestrar");
-            if (Input.GetKeyDown(KeyCode.Alpha1)){
+            if (Input.GetMouseButtonDown(0)){
                 player.SnatchKid(kidRef.GetComponent<KidController>());
                 Debug.Log("te secuestre");
             }
