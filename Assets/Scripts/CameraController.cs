@@ -5,6 +5,7 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     [SerializeField] private float _sensX, _sensY;
+    public float sensX, sensY;
     private float _xRotation, _yRotation;
 
 
@@ -19,6 +20,9 @@ public class CameraController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        //_sensX = sensX;
+        //_sensY = sensY;
+
         float mouseX = Input.GetAxisRaw("Mouse X") * Time.fixedDeltaTime * _sensX;
         float mouseY = Input.GetAxisRaw("Mouse Y") * Time.fixedDeltaTime * _sensY;
 

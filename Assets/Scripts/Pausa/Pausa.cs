@@ -16,11 +16,11 @@ public class Pausa : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (GameIsPaused)
+            if (GameIsPaused && ajustesUI.activeSelf == false)
             {
                 Resume();
             }
-            else
+            else if (GameIsPaused == false)
             {
                 Pause();
             }
