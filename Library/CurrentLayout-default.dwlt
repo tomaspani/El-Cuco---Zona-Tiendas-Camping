@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Inspector
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
@@ -122,7 +122,7 @@ MonoBehaviour:
   m_MinSize: {x: 579, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 45
+  controlID: 17
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -168,7 +168,7 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 1368
-    height: 674
+    height: 676
   m_MinSize: {x: 303, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
@@ -191,7 +191,7 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 429
-    height: 674
+    height: 676
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 13}
@@ -217,7 +217,7 @@ MonoBehaviour:
     x: 429
     y: 0
     width: 939
-    height: 674
+    height: 676
   m_MinSize: {x: 102, y: 121}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 14}
@@ -242,9 +242,9 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 674
+    y: 676
     width: 1368
-    height: 273
+    height: 271
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 15}
@@ -303,7 +303,7 @@ MonoBehaviour:
     x: 429
     y: 73
     width: 937
-    height: 653
+    height: 655
   m_ViewDataDictionary: {fileID: 0}
   m_SerializedViewNames: []
   m_SerializedViewValues: []
@@ -348,9 +348,9 @@ MonoBehaviour:
       x: 0
       y: 21
       width: 937
-      height: 632
+      height: 634
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 468.5, y: 316}
+    m_Translation: {x: 468.5, y: 317}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -358,12 +358,12 @@ MonoBehaviour:
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
       x: -468.5
-      y: -316
+      y: -317
       width: 937
-      height: 632
+      height: 634
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 937, y: 653}
+  m_LastWindowPixelSize: {x: 937, y: 655}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -392,28 +392,28 @@ MonoBehaviour:
     x: 0
     y: 73
     width: 428
-    height: 653
+    height: 655
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: ce6efffff26effff4c88ffff5088ffff8ea3ffffb2a3ffff0cbdffff10bdffff7ac1ffff9ec1fffff8dafffffcdaffffd8dbffff6efbfffff4430000fa210100b8760100acfd010030040200e20e0200f0080300be090300
+      m_SelectedIDs: 2252ffff
+      m_LastClickedID: -44510
+      m_ExpandedIDs: 7e4dffffe44fffffc068ffff1476ffffe2c4ffffecc4ffffacdaffff6a5e0000745e0000a65e0000165f0000e05f00008e600000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Flechita
-        m_OriginalName: Flechita
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 130284
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 8}
       m_SearchString: 
@@ -446,7 +446,7 @@ MonoBehaviour:
     x: 429
     y: 73
     width: 937
-    height: 653
+    height: 655
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
   m_WindowGUID: 6222d17fbce70bc4f9703955bdb7a267
@@ -459,9 +459,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 443.66956, y: 220.28601, z: 0}
+    m_Target: {x: 72.72822, y: -0.67036766, z: 116.73358}
     speed: 2
-    m_Value: {x: 443.66956, y: 220.28601, z: 0}
+    m_Value: {x: 72.72822, y: -0.67036766, z: 116.73358}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -508,13 +508,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.04828806, y: 0.011083899, z: -0.00053477206, w: -0.99878025}
+    m_Target: {x: -0.24651206, y: -0.38300195, z: 0.10643739, w: -0.8840064}
     speed: 2
-    m_Value: {x: -0.048287656, y: 0.011083807, z: -0.0005347676, w: -0.9987719}
+    m_Value: {x: -0.24648064, y: -0.38295314, z: 0.10642383, w: -0.8838937}
   m_Size:
-    m_Target: 383.85568
+    m_Target: 5.9251056
     speed: 2
-    m_Value: 383.85568
+    m_Value: 5.9251056
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -560,9 +560,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 747
+    y: 749
     width: 1367
-    height: 252
+    height: 250
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -577,22 +577,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Packages/com.unity.ugui/Runtime/EventSystem
+    - Assets/Prefabs/Entities
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Packages/com.unity.ugui/Runtime/EventSystem
+  - Assets/Prefabs/Entities
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\usuario\OneDrive\Documentos\GitHub\El-Cuco---Zona-Tiendas-Camping
+  m_LastProjectPath: C:\Users\Lucy\Documents\GitHub\El Cuco - Zona Tiendas Camping
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 392}
-    m_SelectedIDs: 4aff0000
-    m_LastClickedID: 65354
-    m_ExpandedIDs: 00000000624c0000644c0000664c0000684c00006a4c0000124d00004cff00004eff000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 106}
+    m_SelectedIDs: 52680000
+    m_LastClickedID: 26706
+    m_ExpandedIDs: 00000000ea630000ec630000ee630000f0630000f26300005a64000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -620,7 +620,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000624c0000644c0000664c0000684c00006a4c0000
+    m_ExpandedIDs: 00000000ea630000ec630000ee630000f0630000f2630000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -708,7 +708,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 273
+  m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_LockTracker:
     m_IsLocked: 0
