@@ -52,6 +52,7 @@ MonoBehaviour:
   isKidnapable: 0
   candy: {fileID: 5549135191002571371, guid: 694bc72295f9e684383ffa31d9e805b9, type: 3}
   candyDrop: {fileID: 8446590665591382214}
+  susValue: 15
 --- !u!65 &1046265117661896792
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -125,6 +126,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   canSeeCuco: 0
+  player: {fileID: 0}
 --- !u!1 &1046265118106743463
 GameObject:
   m_ObjectHideFlags: 0

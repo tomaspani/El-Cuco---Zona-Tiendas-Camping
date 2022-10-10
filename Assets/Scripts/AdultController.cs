@@ -25,7 +25,11 @@ public class AdultController : MonoBehaviour
         else if (_fov.canSeePlayer == true && _fov.seesPlayer == true)
             AddAlert(_fov.playerRef, 5f);
         else
+        {
             LooseSuspicion(_fov.playerRef);
+            Debug.Log("ahhh adult");
+        }
+            
         
     }
 

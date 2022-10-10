@@ -10,6 +10,8 @@ public class KidController : MonoBehaviour
     public GameObject candy;
     public GameObject candyDrop;
 
+    public float susValue;
+
     private FOVKid _fov;
     private bool _canSeeCuco;
     private SoundManager _soundMan;
@@ -20,11 +22,15 @@ public class KidController : MonoBehaviour
         _soundMan = FindObjectOfType<SoundManager>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         //feedback.text = "";
         _canSeeCuco = _fov.getBoolean();
 
+        if (_canSeeCuco == true)
+            SeeCuco();
+        //else
+            //cantSeeCuco();
     }
 
 
@@ -58,7 +64,21 @@ public class KidController : MonoBehaviour
         
     }
 
+    public void SeeCuco()
+    {
 
+        var targetRotation = Quaternion.LookRotation(_fov.player.transform.position - transform.position);
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 10f * Time.deltaTime);
+        _fov.player.addKidSuspicion(susValue);
+        //transform.LookAt(_fov.player.transform.position);
+        //Debug.Log("omg");
+    }
+
+    public void cantSeeCuco()
+    {
+        _fov.player.LooseSuspicion(susValue);
+        Debug.Log("ahhh kid");
+    }
     public void kidnap()
     {
         if (isKidnapable)

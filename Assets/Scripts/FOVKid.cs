@@ -15,14 +15,16 @@ public class FOVKid : MonoBehaviour
     private SoundManager _soundMan;
     //public GameObject kidRef;
 
-    PlayerController player;
+    public PlayerController player;
 
+    KidController kid;
 
 
     private void Start()
     {
         player = FindObjectOfType<PlayerController>();
         _soundMan = FindObjectOfType<SoundManager>();
+        kid = GetComponent<KidController>();
         StartCoroutine(FOVRoutine());
     }
 
@@ -56,7 +58,7 @@ public class FOVKid : MonoBehaviour
                     canSeeCuco = true;
                     Debug.Log("aaaaah un cuco");
                     
-                    
+
                 }
                 else
                     canSeeCuco = false;
@@ -75,6 +77,7 @@ public class FOVKid : MonoBehaviour
     }
 
 
+
     //----------------------------------------CHEQUEO SFX-----------------------------------------------------------------------------------
 
     bool checkitCanSeeCuco;
@@ -89,7 +92,6 @@ public class FOVKid : MonoBehaviour
             print("canseeplayer has changed to: " + canSeeCuco);
             if (canSeeCuco == true)
             {
-                player.addSuspicion(30);
                 _soundMan.PlaySound("kidScream");
             }
             //else
