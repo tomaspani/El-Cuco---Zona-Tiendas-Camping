@@ -8,6 +8,7 @@ public class Pausa : MonoBehaviour
     public static bool GameIsPaused = false;
 
     public GameObject pauseMenuUI;
+    public GameObject generalUI;
 
     public GameObject ajustesUI;
     public GameObject flechita;
@@ -24,6 +25,11 @@ public class Pausa : MonoBehaviour
             {
                 Pause();
             }
+            else if (GameIsPaused && ajustesUI.activeSelf == true)
+            {
+                Atras();
+            }
+            
         }
 
     }
@@ -31,6 +37,7 @@ public class Pausa : MonoBehaviour
     public void Resume()
     {
         pauseMenuUI.SetActive(false);
+        generalUI.SetActive(true);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         Time.timeScale = 1f;
@@ -40,6 +47,7 @@ public class Pausa : MonoBehaviour
     void Pause()
     {
         pauseMenuUI.SetActive(true);
+        generalUI.SetActive(false);
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
         Time.timeScale = 0f;
@@ -50,7 +58,9 @@ public class Pausa : MonoBehaviour
     public void Restart()
     {
         Resume();
+        //Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        
     }
 
     public void Ajustes()

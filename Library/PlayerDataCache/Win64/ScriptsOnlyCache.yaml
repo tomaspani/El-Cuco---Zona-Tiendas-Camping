@@ -575,7 +575,7 @@ ScriptsOnlyBuild:
     className: TestRunCallbackListener
   - hash:
       serializedVersion: 2
-      Hash: 114b96d05c4e2727c96f851ef48cdf39
+      Hash: f987da4fc4388816ad4e7e5ba83c5050
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: FOVKid
@@ -689,7 +689,7 @@ ScriptsOnlyBuild:
     className: ContentSizeFitter
   - hash:
       serializedVersion: 2
-      Hash: 40c51d989be9bee3c78ace1ad29660ce
+      Hash: eb6bc07dce3c2dafd9d04b7a62e070f2
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: KidController
@@ -941,7 +941,7 @@ ScriptsOnlyBuild:
     className: PositionsFollowAdult
   - hash:
       serializedVersion: 2
-      Hash: e277e33e851eabc2dd880fa1e3b6e192
+      Hash: 3e63cfa00018ca9a5e8a45ed82d93988
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Pausa
@@ -997,4 +997,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Camping Zone.unity
   - Assets/Scenes/NavMeshTesting.unity
-  playerPath: C:/Users/Lucy/Documents/GitHub/El Cuco - Zona Tiendas Camping.exe
+  playerPath: C:/Users/usuario/Desktop/build/El Cuco - Zona Tiendas Camping.exe
