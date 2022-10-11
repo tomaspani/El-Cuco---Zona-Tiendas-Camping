@@ -81,6 +81,7 @@ public class WaypointMover : MonoBehaviour
             
             var targetRotation = Quaternion.LookRotation(_fov.playerRef.transform.position - transform.position);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 2.5f * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, _fov.playerRef.transform.position, movSpeed/6f * Time.deltaTime);
             _navMeshAgent.isStopped = true;
         }
         else {

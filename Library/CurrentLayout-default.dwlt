@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Inspector
+  m_Title: Scene
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
@@ -122,7 +122,7 @@ MonoBehaviour:
   m_MinSize: {x: 579, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 17
+  controlID: 45
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -397,9 +397,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 2252ffff
-      m_LastClickedID: -44510
-      m_ExpandedIDs: 7e4dffffe44fffffc068ffff1476ffffe2c4ffffecc4ffffacdaffff6a5e0000745e0000a65e0000165f0000e05f00008e600000
+      m_SelectedIDs: cc460000
+      m_LastClickedID: 18124
+      m_ExpandedIDs: 62f9ffff6efbffffbc44000020460000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -459,9 +459,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 72.72822, y: -0.67036766, z: 116.73358}
+    m_Target: {x: 62.415413, y: -17.105497, z: 119.23636}
     speed: 2
-    m_Value: {x: 72.72822, y: -0.67036766, z: 116.73358}
+    m_Value: {x: 62.415413, y: -17.105497, z: 119.23636}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -508,13 +508,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.24651206, y: -0.38300195, z: 0.10643739, w: -0.8840064}
+    m_Target: {x: -0.26100773, y: -0.3243986, z: 0.09326186, w: -0.90454423}
     speed: 2
-    m_Value: {x: -0.24648064, y: -0.38295314, z: 0.10642383, w: -0.8838937}
+    m_Value: {x: -0.2606932, y: -0.32706866, z: 0.094032355, w: -0.90345067}
   m_Size:
-    m_Target: 5.9251056
+    m_Target: 51.78494
     speed: 2
-    m_Value: 5.9251056
+    m_Value: 51.78494
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -577,22 +577,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs/Entities
+    - Assets/Scripts
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs/Entities
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Lucy\Documents\GitHub\El Cuco - Zona Tiendas Camping
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 106}
-    m_SelectedIDs: 52680000
-    m_LastClickedID: 26706
-    m_ExpandedIDs: 00000000ea630000ec630000ee630000f0630000f26300005a64000000ca9a3b
+    scrollPos: {x: 0, y: 138}
+    m_SelectedIDs: a64d0000
+    m_LastClickedID: 19878
+    m_ExpandedIDs: 000000000e4d0000104d0000124d0000144d0000164d0000a24d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -620,7 +620,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ea630000ec630000ee630000f0630000f2630000
+    m_ExpandedIDs: 000000000e4d0000104d0000124d0000144d0000164d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -672,7 +672,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 8}
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 376
@@ -708,7 +708,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 360
   m_GlobalObjectId: 
   m_LockTracker:
     m_IsLocked: 0
