@@ -14,8 +14,8 @@ public class AdultController : MonoBehaviour
     {
         //if(_fov == null)
         //{
-        _fov = this.GetComponent<FieldOfView>();
-        _WM = this.GetComponent<WaypointMover>();
+        _fov = this.GetComponentInParent<FieldOfView>();
+        _WM = this.GetComponentInParent<WaypointMover>();
         //}
         
     }

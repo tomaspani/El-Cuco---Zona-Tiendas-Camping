@@ -37,7 +37,7 @@ public class FOVKid : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(canCallAdult)
+        if(canCallAdult && canSeeCuco)
         {
             CallAdult(kid);
         }
@@ -126,6 +126,7 @@ public class FOVKid : MonoBehaviour
     private void CallAdult(KidController kid)
     {
         adult.GetComponent<AdultController>().GoToKid(kid);
+        Debug.Log("x");
     }
 
     public bool getBoolean()

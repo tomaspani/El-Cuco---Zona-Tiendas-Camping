@@ -5330,8 +5330,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d87125cc78d6aea48bfea40242f5cf0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sensX: 400
+  _sensX: 200
   _sensY: 0
+  sensX: 0
+  sensY: 0
   orientation: {fileID: 3095059109267792983}
 --- !u!114 &3095059110770710853
 MonoBehaviour:
@@ -5684,8 +5686,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d87125cc78d6aea48bfea40242f5cf0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sensX: 400
-  _sensY: 400
+  _sensX: 200
+  _sensY: 200
+  sensX: 0
+  sensY: 0
   orientation: {fileID: 3095059109267792983}
 --- !u!1001 &6500586185502068460
 PrefabInstance:

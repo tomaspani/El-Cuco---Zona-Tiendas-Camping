@@ -18,7 +18,7 @@ public class WaypointMover : MonoBehaviour
     public float _lookingTime;
     [SerializeField] int _currentWatchPositionIndex;
     public bool IsLookingAround;
-    private bool getsCalled;
+    [SerializeField] private bool getsCalled;
     Quaternion CheckPositionRotation;
     float counter = 0;
 
@@ -79,20 +79,18 @@ public class WaypointMover : MonoBehaviour
             getsCalled = true;
             var targetRotation = Quaternion.LookRotation(kid.transform.position - transform.position);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 2.5f * Time.deltaTime);
-            transform.position = Vector3.MoveTowards(transform.position, kid.transform.position, movSpeed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, kid.transform.position, movSpeed/4 * Time.deltaTime);
+            _navMeshAgent.isStopped = true;
         }
         else
         {
             getsCalled = false;
         }
-        
+        getsCalled = false;
 
 
     }
-    public void setGetsCalled(bool val)
-    {
-        getsCalled = val;
-    }
+
 
     //DONE
     private void CanSeePlayer()
@@ -143,20 +141,22 @@ public class WaypointMover : MonoBehaviour
     {
         //Debug.Log(_currentWaypointIndex);
         //Debug.Log(_waypoints.Count);
-        if (_currentWaypointIndex < _waypoints.Count-1)
+        if (getsCalled == false)
         {
-            _currentWaypointIndex += 1;
-        }
-        else
-        {
-            _currentWaypointIndex = 0;
-        }
+            if (_currentWaypointIndex < _waypoints.Count - 1)
+            {
+                _currentWaypointIndex += 1;
+            }
+            else
+            {
+                _currentWaypointIndex = 0;
+            }
 
-        _currentWaypoint = _waypoints[_currentWaypointIndex];
-        _navMeshAgent.SetDestination(_currentWaypoint.position);
-        var targetRotation = Quaternion.LookRotation(_currentWaypoint.transform.position - transform.position);
-        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, movSpeed * Time.deltaTime);
-        
+            _currentWaypoint = _waypoints[_currentWaypointIndex];
+            _navMeshAgent.SetDestination(_currentWaypoint.position);
+            var targetRotation = Quaternion.LookRotation(_currentWaypoint.transform.position - transform.position);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, movSpeed * Time.deltaTime);
+        }  
 
 
     }
