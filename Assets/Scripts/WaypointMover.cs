@@ -44,16 +44,19 @@ public class WaypointMover : MonoBehaviour
 
     private void FixedUpdate()
     {
+        Debug.Log(getsCalled);
         var distanceToWaypoint = Vector3.Distance(_currentWaypoint.position, transform.position);
         if (_fov.seesPlayer!)
         {
             SeesPlayer();
         }
-        else if (getsCalled == false){
+        else if (getsCalled!)
+        {
             _navMeshAgent.isStopped = false;
             if (distanceToWaypoint <= _distanceToCheck)
             {
-                IsLookingAround = true;
+
+                
                 ChangeLookPosition();
                     //Invoke(nameof(ChangeLookPosition), _lookingTime);
                 
@@ -73,25 +76,27 @@ public class WaypointMover : MonoBehaviour
     }
     public void GoToKid(KidController kid)
     {
+        var targetRotation = Quaternion.LookRotation(kid.transform.position - transform.position);
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 2.5f * Time.deltaTime);
         float distanceToTarget = Vector3.Distance(transform.position, kid.transform.position);
-        if (distanceToTarget > 2f)
+        if (distanceToTarget > _distanceToCheck)
         {
             getsCalled = true;
-            var targetRotation = Quaternion.LookRotation(kid.transform.position - transform.position);
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 2.5f * Time.deltaTime);
+            
             transform.position = Vector3.MoveTowards(transform.position, kid.transform.position, movSpeed/4 * Time.deltaTime);
             _navMeshAgent.isStopped = true;
         }
         else
         {
-            getsCalled = false;
+            
+            _navMeshAgent.isStopped = false;
         }
-        getsCalled = false;
+        
 
 
     }
 
-
+    #region LookingAtPlayer
     //DONE
     private void CanSeePlayer()
     {
@@ -134,15 +139,14 @@ public class WaypointMover : MonoBehaviour
             //transform.LookAt(currentWaypoint);
         }
     }
-
-
-
+    #endregion
+    #region Waypoints
     void ChangeWaypoint()
     {
         //Debug.Log(_currentWaypointIndex);
         //Debug.Log(_waypoints.Count);
-        if (getsCalled == false)
-        {
+        //if (getsCalled == false)
+        //{
             if (_currentWaypointIndex < _waypoints.Count - 1)
             {
                 _currentWaypointIndex += 1;
@@ -156,7 +160,7 @@ public class WaypointMover : MonoBehaviour
             _navMeshAgent.SetDestination(_currentWaypoint.position);
             var targetRotation = Quaternion.LookRotation(_currentWaypoint.transform.position - transform.position);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, movSpeed * Time.deltaTime);
-        }  
+        //}  
 
 
     }
@@ -165,11 +169,11 @@ public class WaypointMover : MonoBehaviour
         //
     }
 
-   
-    
+    #endregion
+    #region LookPosition
     void ChangeLookPosition ()
     {
-
+        Debug.Log("mirando a posicion");
         IsLookingAround = true;
         _navMeshAgent.isStopped = true;     
         currentWatchPosition = _positionsToCheck[_currentWatchPositionIndex];
@@ -191,4 +195,5 @@ public class WaypointMover : MonoBehaviour
             _currentWatchPositionIndex = 0;
         }
     }
+    #endregion
 }

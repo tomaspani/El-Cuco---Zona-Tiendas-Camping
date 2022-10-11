@@ -83,7 +83,7 @@ public class FOVKid : MonoBehaviour
                 if (!Physics.Raycast(transform.position, directionToTarget, distanceToTarget, obstructionMask))
                 {
                     canSeeCuco = true;
-                    Debug.Log("aaaaah un cuco");
+                    //Debug.Log("aaaaah un cuco");
                     
 
                 }
@@ -105,7 +105,7 @@ public class FOVKid : MonoBehaviour
         if(CallAdultCheck.Length != 0)
         {
             adult = CallAdultCheck[0].transform;
-            Debug.Log(adult.name);
+            //Debug.Log(adult.name);
             Vector3 directionToTarget = (adult.position - transform.position).normalized;
             float distanceToTarget = Vector3.Distance(transform.position, adult.position);
             if (Physics.Raycast(transform.position, directionToTarget, distanceToTarget))
@@ -126,7 +126,7 @@ public class FOVKid : MonoBehaviour
     private void CallAdult(KidController kid)
     {
         adult.GetComponent<AdultController>().GoToKid(kid);
-        Debug.Log("x");
+        //Debug.Log("x");
     }
 
     public bool getBoolean()
