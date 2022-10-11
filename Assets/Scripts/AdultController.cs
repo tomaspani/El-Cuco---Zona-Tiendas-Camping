@@ -7,13 +7,15 @@ public class AdultController : MonoBehaviour
 
     [SerializeField] float suspcionValue;
     private FieldOfView _fov;
+    private WaypointMover _WM;
 
 
     private void Start()
     {
         //if(_fov == null)
         //{
-            _fov = this.GetComponent<FieldOfView>();
+        _fov = this.GetComponent<FieldOfView>();
+        _WM = this.GetComponent<WaypointMover>();
         //}
         
     }
@@ -27,7 +29,6 @@ public class AdultController : MonoBehaviour
         else
         {
             LooseSuspicion(_fov.playerRef);
-            Debug.Log("ahhh adult");
         }
             
         
@@ -46,6 +47,12 @@ public class AdultController : MonoBehaviour
     public void LooseSuspicion(GameObject player)
     {
         player.GetComponent<PlayerController>().LooseSuspicion(suspcionValue / 8f  * Time.deltaTime);
+    }
+
+
+    public void GoToKid(KidController kid)
+    {
+        _WM.GoToKid(kid);
     }
 
 

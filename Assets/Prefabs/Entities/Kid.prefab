@@ -119,12 +119,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 3.5
   angle: 90
+  callAdultRadius: 0
   targetMask:
     serializedVersion: 2
     m_Bits: 512
   obstructionMask:
     serializedVersion: 2
     m_Bits: 128
+  callMask:
+    serializedVersion: 2
+    m_Bits: 2048
   canSeeCuco: 0
   player: {fileID: 0}
 --- !u!1 &1046265118106743463

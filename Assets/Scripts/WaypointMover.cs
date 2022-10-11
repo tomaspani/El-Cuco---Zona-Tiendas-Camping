@@ -18,6 +18,7 @@ public class WaypointMover : MonoBehaviour
     public float _lookingTime;
     [SerializeField] int _currentWatchPositionIndex;
     public bool IsLookingAround;
+    private bool getsCalled;
     Quaternion CheckPositionRotation;
     float counter = 0;
 
@@ -48,7 +49,7 @@ public class WaypointMover : MonoBehaviour
         {
             SeesPlayer();
         }
-        else {
+        else if (getsCalled == false){
             _navMeshAgent.isStopped = false;
             if (distanceToWaypoint <= _distanceToCheck)
             {
@@ -70,6 +71,29 @@ public class WaypointMover : MonoBehaviour
 
 
     }
+    public void GoToKid(KidController kid)
+    {
+        float distanceToTarget = Vector3.Distance(transform.position, kid.transform.position);
+        if (distanceToTarget > 2f)
+        {
+            getsCalled = true;
+            var targetRotation = Quaternion.LookRotation(kid.transform.position - transform.position);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 2.5f * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, kid.transform.position, movSpeed * Time.deltaTime);
+        }
+        else
+        {
+            getsCalled = false;
+        }
+        
+
+
+    }
+    public void setGetsCalled(bool val)
+    {
+        getsCalled = val;
+    }
+
     //DONE
     private void CanSeePlayer()
     {

@@ -8,7 +8,10 @@ public class FOVKid : MonoBehaviour
     [Range(0, 360)]
     public float angle;
 
-    public LayerMask targetMask, obstructionMask;
+
+    public float callAdultRadius;
+
+    public LayerMask targetMask, obstructionMask, callMask;
 
     public bool canSeeCuco;
 
@@ -18,6 +21,9 @@ public class FOVKid : MonoBehaviour
     public PlayerController player;
 
     KidController kid;
+    Transform adult;
+
+    public bool canCallAdult;
 
 
     private void Start()
@@ -26,8 +32,16 @@ public class FOVKid : MonoBehaviour
         _soundMan = FindObjectOfType<SoundManager>();
         kid = GetComponent<KidController>();
         StartCoroutine(FOVRoutine());
+        StartCoroutine(FOVCallAdultRoutine());
     }
 
+    private void FixedUpdate()
+    {
+        if(canCallAdult)
+        {
+            CallAdult(kid);
+        }
+    }
 
     private IEnumerator FOVRoutine()
     {
@@ -37,6 +51,19 @@ public class FOVKid : MonoBehaviour
         {
             yield return wait;
             FieldOfViewCheck();
+            
+        }
+    }
+
+    private IEnumerator FOVCallAdultRoutine()
+    {
+        WaitForSeconds wait = new WaitForSeconds(0.2f);
+
+        while (true)
+        {
+            yield return wait;
+            FieldOfViewCallAdult();
+
         }
     }
 
@@ -71,12 +98,45 @@ public class FOVKid : MonoBehaviour
             canSeeCuco = false;
     }
 
+    private void FieldOfViewCallAdult()
+    {
+        Collider[] CallAdultCheck = Physics.OverlapSphere(transform.position, callAdultRadius, callMask);
+
+        if(CallAdultCheck.Length != 0)
+        {
+            adult = CallAdultCheck[0].transform;
+            Debug.Log(adult.name);
+            Vector3 directionToTarget = (adult.position - transform.position).normalized;
+            float distanceToTarget = Vector3.Distance(transform.position, adult.position);
+            if (Physics.Raycast(transform.position, directionToTarget, distanceToTarget))
+            {
+                canCallAdult = true;
+            }
+            else
+            {
+                canCallAdult = false;
+            }
+        }
+        else
+        {
+            canCallAdult = false;
+        }
+    }
+
+    private void CallAdult(KidController kid)
+    {
+        adult.GetComponent<AdultController>().GoToKid(kid);
+    }
+
     public bool getBoolean()
     {
         return canSeeCuco;
     }
 
-
+    public Transform getAdultTransform()
+    {
+        return adult;
+    }
 
     //----------------------------------------CHEQUEO SFX-----------------------------------------------------------------------------------
 
