@@ -10,7 +10,13 @@ public class FollowCandy : MonoBehaviour
     [SerializeField] Transform CandyPosition;
     [SerializeField] GameObject TargetedCandy;
     [SerializeField] float Distance;
+    FOVKid _fov;
     public float FollowDistance;
+
+    private void Start()
+    {
+        _fov = GetComponent<FOVKid>();
+    }
 
     private void Update()
     {
@@ -18,7 +24,7 @@ public class FollowCandy : MonoBehaviour
         Distance = Vector3.Distance(this.transform.position, TargetedCandy.transform.position);
         if (Distance < FollowDistance)
         {ChaseCandy();}
-       
+        else { _fov.enabled = true; }
         
     }
 
@@ -37,5 +43,6 @@ public class FollowCandy : MonoBehaviour
     {
         CandyPosition = TargetedCandy.GetComponent<Transform>();
         Kid.SetDestination(CandyPosition.position);
+        _fov.enabled = false;
     }
 }

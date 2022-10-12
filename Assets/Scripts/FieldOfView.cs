@@ -158,7 +158,6 @@ public class FieldOfView : MonoBehaviour
         {
             checkitSus = canSeePlayer;
 
-            print("canseeplayer has changed to: " + canSeePlayer);
             if (canSeePlayer == true && seesPlayer == false)
             {
                 soundManager.PlaySound("sus");
@@ -171,7 +170,6 @@ public class FieldOfView : MonoBehaviour
         {
             checkitAlert = seesPlayer;
 
-            print("seesPlayer has changed to: " + seesPlayer);
             if (seesPlayer == true && canSeePlayer == true)
             {
                 soundManager.PlaySound("alert");

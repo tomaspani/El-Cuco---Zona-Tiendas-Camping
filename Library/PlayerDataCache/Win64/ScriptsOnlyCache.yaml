@@ -28,9 +28,6 @@ ScriptsOnlyBuild:
     - UIManager
     - WaypointMover
     - Waypoints
-    Unity.ProBuilder.Editor.dll:
-    - UnityEditor.ProBuilder.EditorToolbar
-    - UnityEditor.ProBuilder.ProBuilderEditor
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro.dll:
@@ -120,57 +117,57 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2350}
     - Class: 114
-      Script: {instanceID: 2538}
+      Script: {instanceID: 2540}
     - Class: 114
-      Script: {instanceID: 2668}
+      Script: {instanceID: 2670}
     - Class: 114
-      Script: {instanceID: 2714}
+      Script: {instanceID: 2716}
     - Class: 114
-      Script: {instanceID: 2770}
+      Script: {instanceID: 2772}
     - Class: 114
-      Script: {instanceID: 2862}
+      Script: {instanceID: 2864}
     - Class: 114
-      Script: {instanceID: 3094}
+      Script: {instanceID: 3096}
     - Class: 114
-      Script: {instanceID: 3210}
+      Script: {instanceID: 3212}
     - Class: 114
-      Script: {instanceID: 3422}
+      Script: {instanceID: 3424}
     - Class: 114
-      Script: {instanceID: 3524}
+      Script: {instanceID: 3526}
     - Class: 114
-      Script: {instanceID: 3558}
+      Script: {instanceID: 3560}
     - Class: 114
-      Script: {instanceID: 3734}
+      Script: {instanceID: 3736}
     - Class: 114
-      Script: {instanceID: 3776}
+      Script: {instanceID: 3778}
     - Class: 114
-      Script: {instanceID: 3900}
+      Script: {instanceID: 3902}
     - Class: 114
-      Script: {instanceID: 4110}
+      Script: {instanceID: 4112}
     - Class: 114
-      Script: {instanceID: 4280}
+      Script: {instanceID: 4282}
     - Class: 114
-      Script: {instanceID: 4350}
+      Script: {instanceID: 4352}
     - Class: 114
-      Script: {instanceID: 4426}
+      Script: {instanceID: 4428}
     - Class: 114
-      Script: {instanceID: 4626}
+      Script: {instanceID: 4628}
     - Class: 114
-      Script: {instanceID: 4734}
+      Script: {instanceID: 4736}
     - Class: 114
-      Script: {instanceID: 4740}
+      Script: {instanceID: 4742}
     - Class: 114
-      Script: {instanceID: 4744}
+      Script: {instanceID: 4746}
     - Class: 114
-      Script: {instanceID: 4790}
+      Script: {instanceID: 4792}
     - Class: 114
-      Script: {instanceID: 4930}
+      Script: {instanceID: 4932}
     - Class: 114
-      Script: {instanceID: 5050}
+      Script: {instanceID: 5052}
     - Class: 114
-      Script: {instanceID: 5120}
+      Script: {instanceID: 5122}
     - Class: 114
-      Script: {instanceID: 5174}
+      Script: {instanceID: 5176}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -267,49 +264,49 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2262}
     - Class: 114
-      Script: {instanceID: 2538}
+      Script: {instanceID: 2540}
     - Class: 114
-      Script: {instanceID: 2668}
+      Script: {instanceID: 2670}
     - Class: 114
-      Script: {instanceID: 2770}
+      Script: {instanceID: 2772}
     - Class: 114
-      Script: {instanceID: 2862}
+      Script: {instanceID: 2864}
     - Class: 114
-      Script: {instanceID: 3094}
+      Script: {instanceID: 3096}
     - Class: 114
-      Script: {instanceID: 3208}
+      Script: {instanceID: 3210}
     - Class: 114
-      Script: {instanceID: 3422}
+      Script: {instanceID: 3424}
     - Class: 114
-      Script: {instanceID: 3524}
+      Script: {instanceID: 3526}
     - Class: 114
-      Script: {instanceID: 3734}
+      Script: {instanceID: 3736}
     - Class: 114
-      Script: {instanceID: 3776}
+      Script: {instanceID: 3778}
     - Class: 114
-      Script: {instanceID: 3900}
+      Script: {instanceID: 3902}
     - Class: 114
-      Script: {instanceID: 4110}
+      Script: {instanceID: 4112}
     - Class: 114
-      Script: {instanceID: 4280}
+      Script: {instanceID: 4282}
     - Class: 114
-      Script: {instanceID: 4350}
+      Script: {instanceID: 4352}
     - Class: 114
-      Script: {instanceID: 4626}
+      Script: {instanceID: 4628}
     - Class: 114
-      Script: {instanceID: 4734}
+      Script: {instanceID: 4736}
     - Class: 114
-      Script: {instanceID: 4744}
+      Script: {instanceID: 4746}
     - Class: 114
-      Script: {instanceID: 4790}
+      Script: {instanceID: 4792}
     - Class: 114
-      Script: {instanceID: 4930}
+      Script: {instanceID: 4932}
     - Class: 114
-      Script: {instanceID: 5080}
+      Script: {instanceID: 5082}
     - Class: 114
-      Script: {instanceID: 5120}
+      Script: {instanceID: 5122}
     - Class: 114
-      Script: {instanceID: 5174}
+      Script: {instanceID: 5176}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -575,7 +572,7 @@ ScriptsOnlyBuild:
     className: TestRunCallbackListener
   - hash:
       serializedVersion: 2
-      Hash: f987da4fc4388816ad4e7e5ba83c5050
+      Hash: d95a2c34f67a2a6ebdbdb154d1eef71b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: FOVKid
@@ -821,7 +818,7 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
-      Hash: d2afe3a9e4bccbbb3e9aa08710587a4d
+      Hash: 530af72c5342601eb244a59ac0df2444
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: WaypointMover
@@ -997,4 +994,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Camping Zone.unity
   - Assets/Scenes/NavMeshTesting.unity
-  playerPath: C:/Users/usuario/Desktop/build/El Cuco - Zona Tiendas Camping.exe
+  playerPath: C:/Users/Lucy/Documents/GitHub/El Cuco - Zona Tiendas Camping.exe

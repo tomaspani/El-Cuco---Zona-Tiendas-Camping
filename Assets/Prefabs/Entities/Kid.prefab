@@ -119,7 +119,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 3.5
   angle: 90
-  callAdultRadius: 0
+  callAdultRadius: 20
   targetMask:
     serializedVersion: 2
     m_Bits: 512
@@ -131,6 +131,7 @@ MonoBehaviour:
     m_Bits: 2048
   canSeeCuco: 0
   player: {fileID: 0}
+  canCallAdult: 0
 --- !u!1 &1046265118106743463
 GameObject:
   m_ObjectHideFlags: 0

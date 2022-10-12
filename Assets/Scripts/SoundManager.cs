@@ -57,7 +57,6 @@ public class SoundManager : MonoBehaviour
             GameObject soundGameObject = GameObject.Find(name);
             if (soundGameObject.GetComponent<AudioSource>().isPlaying)
             {
-                Debug.Log("debug");
                 soundGameObject.GetComponent<AudioSource>().Stop();
 
             }

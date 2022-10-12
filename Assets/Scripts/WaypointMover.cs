@@ -28,7 +28,8 @@ public class WaypointMover : MonoBehaviour
 
     private Vector3 lastPosition;
 
-
+    float count;
+    public float timeToLook;
 
     private void Start()
     {
@@ -50,7 +51,9 @@ public class WaypointMover : MonoBehaviour
             SeesPlayer();
         }
         else if (getsCalled == false){
+            count = 0f;
             _navMeshAgent.isStopped = false;
+            Debug.Log("lol");
             if (distanceToWaypoint <= _distanceToCheck)
             {
                 IsLookingAround = true;
@@ -59,10 +62,19 @@ public class WaypointMover : MonoBehaviour
                 
 
                 if (!IsLookingAround) 
-                { 
+                {
+
                     ChangeWaypoint(); 
                 }
                
+            }
+        }
+        else
+        {
+            count += Time.fixedDeltaTime;
+            if(count >= timeToLook)
+            {
+                getsCalled = false;
             }
         }
 
@@ -74,19 +86,19 @@ public class WaypointMover : MonoBehaviour
     public void GoToKid(KidController kid)
     {
         float distanceToTarget = Vector3.Distance(transform.position, kid.transform.position);
+        var targetRotation = Quaternion.LookRotation(kid.transform.position - transform.position);
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 1000f * Time.fixedDeltaTime);
         if (distanceToTarget > 2f)
         {
             getsCalled = true;
-            var targetRotation = Quaternion.LookRotation(kid.transform.position - transform.position);
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 2.5f * Time.deltaTime);
-            transform.position = Vector3.MoveTowards(transform.position, kid.transform.position, movSpeed/4 * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, kid.transform.position, movSpeed * Time.fixedDeltaTime);
             _navMeshAgent.isStopped = true;
         }
-        else
-        {
-            getsCalled = false;
-        }
-        getsCalled = false;
+        //else
+        //{
+        //    getsCalled = false;
+        //}
+        //getsCalled = false;
 
 
     }
@@ -182,7 +194,6 @@ public class WaypointMover : MonoBehaviour
         if (counter >= _lookingTime)
         {
             _currentWatchPositionIndex += 1;
-            Debug.Log(_currentWatchPositionIndex);
             counter = 0;
         }
         if (_currentWatchPositionIndex >= _positionsToCheck.Count)

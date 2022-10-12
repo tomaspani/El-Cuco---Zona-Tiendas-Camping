@@ -2085,6 +2085,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ADULT (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1688437556083688163, guid: e7682bd1705c5d840926e31ccc7de818, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2886253915269413985, guid: e7682bd1705c5d840926e31ccc7de818, type: 3}
       propertyPath: _waypoints.Array.size
       value: 5
@@ -9002,7 +9006,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3095059110770710849, guid: 3cd60e4b842cd434383689062df57a8b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -40.9
+      value: -1.1
       objectReference: {fileID: 0}
     - target: {fileID: 3095059110770710849, guid: 3cd60e4b842cd434383689062df57a8b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -9331,6 +9335,10 @@ PrefabInstance:
     - target: {fileID: 1688437556083688163, guid: e7682bd1705c5d840926e31ccc7de818, type: 3}
       propertyPath: m_Name
       value: ADULT
+      objectReference: {fileID: 0}
+    - target: {fileID: 1688437556083688163, guid: e7682bd1705c5d840926e31ccc7de818, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2886253915269413985, guid: e7682bd1705c5d840926e31ccc7de818, type: 3}
       propertyPath: _waypoints.Array.data[0]
@@ -11759,7 +11767,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh18300
+  m_Name: pb_Mesh21686
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -17072,7 +17080,7 @@ GameObject:
   - component: {fileID: 1578084130}
   - component: {fileID: 1578084129}
   - component: {fileID: 1578084128}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
