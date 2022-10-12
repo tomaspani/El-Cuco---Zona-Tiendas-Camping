@@ -48,8 +48,8 @@ public class PlayerController : MonoBehaviour
                 
             }
         }
-        else
-            suspicion = maxSus * 0.9f;
+        //else
+            //suspicion = maxSus * 0.9f;
         
     }
 

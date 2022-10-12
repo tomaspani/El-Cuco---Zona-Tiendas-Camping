@@ -10,7 +10,8 @@ public class BushHide : MonoBehaviour
 
     private void Start()
     {
-        playerRef = GetComponent<PlayerController>();
+        playerRef = FindObjectOfType<PlayerController>();
+        Debug.Log(playerRef);
     }
 
 
@@ -21,6 +22,7 @@ public class BushHide : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
+        Debug.Log(playerRef);
         if(other.gameObject.tag == "bush")
         {
             //other.gameObject.layer = hidden;
@@ -31,7 +33,8 @@ public class BushHide : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if(other.gameObject.tag == "bush")
+        Debug.Log(playerRef);
+        if (other.gameObject.tag == "bush")
         {
             //other.gameObject.layer = notHidden;
             playerRef.isHidden = false;

@@ -627,7 +627,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ca83e7a3635e714bb67b07cc13090ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  suspcionValue: 5
+  suspcionValue: 2.5
 --- !u!114 &4566792573442331021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -654,7 +654,9 @@ MonoBehaviour:
   _lookingTime: 0
   _currentWatchPositionIndex: 0
   IsLookingAround: 0
+  getsCalled: 0
   movSpeed: 3
+  timeToLook: 0
 --- !u!114 &4566792573442331020
 MonoBehaviour:
   m_ObjectHideFlags: 0

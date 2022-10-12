@@ -43,6 +43,8 @@ public class FollowCandy : MonoBehaviour
     {
         CandyPosition = TargetedCandy.GetComponent<Transform>();
         Kid.SetDestination(CandyPosition.position);
+        Kid.GetComponent<KidController>().isKidnapable = true;
+        _fov.canSeeCuco = false;
         _fov.enabled = false;
     }
 }

@@ -77,7 +77,7 @@ public class KidController : MonoBehaviour
     public void cantSeeCuco()
     {
         _fov.player.LooseSuspicion(susValue);
-        Debug.Log("ahhh kid");
+
     }
     public void kidnap()
     {
