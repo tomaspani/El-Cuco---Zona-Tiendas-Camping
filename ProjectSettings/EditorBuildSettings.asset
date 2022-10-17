@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/NavMeshTesting.unity
     guid: d06875f3f07189e429a8fc48f39b29ae
+  - enabled: 1
+    path: Assets/Scenes/VictoryScreen.unity
+    guid: 05b94b5b2e375f441a6369b2a43860c7
   m_configObjects: {}

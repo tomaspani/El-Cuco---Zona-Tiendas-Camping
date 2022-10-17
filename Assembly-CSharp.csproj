@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{0C7D23EF-45EA-FBCD-DB79-14B5DC1B79DA}</ProjectGuid>
+    <ProjectGuid>{505108E6-B944-7EE6-D666-C79C0B7E3FBB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -62,6 +62,7 @@
     <Compile Include="Assets\Scripts\FieldOfView.cs" />
     <Compile Include="Assets\Scripts\Pausa\Ajustes.cs" />
     <Compile Include="Assets\Scripts\FOVCuco.cs" />
+    <Compile Include="Assets\Scripts\Tree.cs" />
     <Compile Include="Assets\Scripts\FOVKid.cs" />
     <Compile Include="Assets\Scripts\NavMeshWaypoints.cs" />
     <Compile Include="Assets\Scripts\Waypoints.cs" />
@@ -82,7 +83,7 @@
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />
     <Compile Include="Assets\Scripts\Consume.cs" />
-    <Compile Include="Assets\Scripts\Tree.cs" />
+    <Compile Include="Assets\Scripts\PlayAgainButton.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
