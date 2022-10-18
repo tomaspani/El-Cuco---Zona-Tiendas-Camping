@@ -6,12 +6,10 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     private PlayerController player;
-    private int KidCount;
 
     private void Start()
     {
         player = FindObjectOfType<PlayerController>();
-        KidCount = GameObject.FindGameObjectsWithTag("Kid").Length;
     }
 
     private void Update()
@@ -25,10 +23,10 @@ public class GameManager : MonoBehaviour
 
 
         
-        if (player.kidnappedKids == KidCount)
+        /*if (player.kidnappedKids == 4)
         {
             Debug.Log("Ganaste pro");
-            SceneManager.LoadScene(1);
-        }
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }*/
     }
 }

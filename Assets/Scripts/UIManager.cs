@@ -2,13 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public class UIManager : MonoBehaviour
 {
     public Slider sus;
     public Text candy;
-    public TMP_Text kidsInBag;
+    public Text kidsInBag;
     public Image stealth;
     public float timeMax;
 
@@ -29,7 +28,9 @@ public class UIManager : MonoBehaviour
     {
         sus.value = player.suspicion;
         candy.text = "Candies: " + candieMan.Candies;
-        kidsInBag.text = "" + player.kidsInBag;
+        kidsInBag.text = "Kids in the Bag: " + player.kidsInBag;
+
+
     }
 
     private void FixedUpdate()
