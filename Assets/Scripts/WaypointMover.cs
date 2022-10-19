@@ -20,7 +20,9 @@ public class WaypointMover : MonoBehaviour
     public bool IsLookingAround;
     [SerializeField] private bool getsCalled;
     Quaternion CheckPositionRotation;
-    float counter = 0;
+    [SerializeField] float counter = 0;
+    [SerializeField] AdultType type;
+    Vector3 startPosition;
 
     //[SerializeField] private Waypoints waypoints;
 
@@ -38,7 +40,8 @@ public class WaypointMover : MonoBehaviour
         _navMeshAgent.isStopped = false;
         transform.position = _waypoints[0].position;
         currentWatchPosition = _positionsToCheck[0];
-      
+        startPosition = transform.position;
+        
         
     }
 
@@ -46,8 +49,10 @@ public class WaypointMover : MonoBehaviour
     {
         Debug.Log(getsCalled);
         var distanceToWaypoint = Vector3.Distance(_currentWaypoint.position, transform.position);
-        if (_fov.seesPlayer!)
+        
+        switch (type)
         {
+<<<<<<< Updated upstream
             SeesPlayer();
         }
         else if (getsCalled!)
@@ -59,8 +64,30 @@ public class WaypointMover : MonoBehaviour
                 
                 ChangeLookPosition();
                     //Invoke(nameof(ChangeLookPosition), _lookingTime);
+=======
+            case AdultType.Guard:
+>>>>>>> Stashed changes
                 
+                if (_fov.seesPlayer!)
+                {
+                    SeesPlayer();
+                }
+                else if (getsCalled == false)
+                {
+                    count = 0f;
+                    _navMeshAgent.isStopped = false;
+                    //Debug.Log("lol");
+                    if (distanceToWaypoint <= _distanceToCheck)
+                    {
+                        IsLookingAround = true;
+                        ChangeLookPosition();
+                        //Invoke(nameof(ChangeLookPosition), _lookingTime);
 
+
+                        if (!IsLookingAround)
+                        {
+
+<<<<<<< Updated upstream
                 if (!IsLookingAround) 
                 { 
                     ChangeWaypoint(); 
@@ -68,12 +95,52 @@ public class WaypointMover : MonoBehaviour
                
             }
         }
+=======
+                            ChangeWaypoint();
+                        }
 
-        CanSeePlayer();
+                    }
+                }
+                else
+                {
+                    count += Time.fixedDeltaTime;
+                    if (count >= timeToLook)
+                    {
+                        getsCalled = false;
+                    }
+                }
+
+                CanSeePlayer();
+
+                break;
+            case AdultType.Watcher:
+                if (_fov.seesPlayer!)
+                {
+                    SeesPlayer();
+                }
+                else if (distanceToWaypoint <= _distanceToCheck)
+                {
+                    Debug.Log("entra en else if");
+                    _navMeshAgent.isStopped = true;
+                    WatcherLookPositions();
+
+                }
+                else
+                {
+                    Debug.Log(distanceToWaypoint);
+                    _navMeshAgent.isStopped = false;
+                    ReturnToWatchPost();
+                }
+                CanSeePlayer();
+                break;
+>>>>>>> Stashed changes
+
+        }
         
 
 
     }
+    #region GotoKid
     public void GoToKid(KidController kid)
     {
         var targetRotation = Quaternion.LookRotation(kid.transform.position - transform.position);
@@ -95,8 +162,13 @@ public class WaypointMover : MonoBehaviour
 
 
     }
+<<<<<<< Updated upstream
 
     #region LookingAtPlayer
+=======
+    #endregion
+
+>>>>>>> Stashed changes
     //DONE
     private void CanSeePlayer()
     {
@@ -195,5 +267,38 @@ public class WaypointMover : MonoBehaviour
             _currentWatchPositionIndex = 0;
         }
     }
+<<<<<<< Updated upstream
     #endregion
+=======
+
+    void ReturnToWatchPost ()
+    {
+        _navMeshAgent.SetDestination(startPosition);
+    }
+
+    void WatcherLookPositions ()
+    {
+        IsLookingAround = true;
+        currentWatchPosition = _positionsToCheck[_currentWatchPositionIndex];
+        CheckPositionRotation = Quaternion.LookRotation(currentWatchPosition.position - transform.position);
+        transform.rotation = Quaternion.Slerp(transform.rotation, CheckPositionRotation, 5f * Time.deltaTime);
+        counter += Time.deltaTime;
+        if (counter >= _lookingTime)
+        {
+            _currentWatchPositionIndex += 1;
+            counter = 0;
+        }
+        if (_currentWatchPositionIndex >= _positionsToCheck.Count)
+        {
+          
+            _currentWatchPositionIndex = 0;
+        }
+
+    }
+>>>>>>> Stashed changes
+}
+enum AdultType
+{
+    Guard,
+    Watcher
 }

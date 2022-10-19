@@ -11,12 +11,19 @@ public class FollowCandy : MonoBehaviour
     [SerializeField] GameObject TargetedCandy;
     [SerializeField] float Distance;
     public float FollowDistance;
+<<<<<<< Updated upstream
+=======
+    private void Start()
+    {
+        _fov = GetComponent<FOVKid>();
+    }
+>>>>>>> Stashed changes
 
     private void Update()
     {
         TargetedCandy = NearestCandy();
         Distance = Vector3.Distance(this.transform.position, TargetedCandy.transform.position);
-        if (Distance < FollowDistance)
+        if (Distance < FollowDistance && _fov.canSeeCuco == true)
         {ChaseCandy();}
        
         

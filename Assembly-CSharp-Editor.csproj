@@ -281,6 +281,7 @@
     </Reference>
     <Reference Include="UnityEditor.Graphs">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.25f1\Editor\Data\Managed\UnityEditor.Graphs.dll</HintPath>
+<<<<<<< Updated upstream
     </Reference>
     <Reference Include="UnityEditor.WebGL.Extensions">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.25f1\Editor\Data\PlaybackEngines\WebGLSupport\UnityEditor.WebGL.Extensions.dll</HintPath>
@@ -308,6 +309,11 @@
     </Reference>
     <Reference Include="UnityEditor.Lumin.Extensions">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.25f1\Editor\Data\PlaybackEngines\LuminSupport\UnityEditor.Lumin.Extensions.dll</HintPath>
+=======
+    </Reference>
+    <Reference Include="UnityEditor.WindowsStandalone.Extensions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.25f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
+>>>>>>> Stashed changes
     </Reference>
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Editor\SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
@@ -323,6 +329,9 @@
     </Reference>
     <Reference Include="log4netPlastic">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.15.4\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.NRefactory">
+      <HintPath>Library\PackageCache\com.unity.render-pipelines.core@10.7.0\Editor\ShaderGenerator\ICSharpCode.NRefactory.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\Newtonsoft.Json.dll</HintPath>
@@ -696,8 +705,11 @@
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
-      <HintPath>Library\ScriptAssemblies\Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
+    <Reference Include="Unity.RenderPipelines.Universal.Shaders">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
@@ -708,14 +720,17 @@
     <Reference Include="Unity.ProBuilder.AddOns.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.ProBuilder.AddOns.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Timeline.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Timeline">
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Searcher.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ProBuilder">
       <HintPath>Library\ScriptAssemblies\Unity.ProBuilder.dll</HintPath>
@@ -732,8 +747,38 @@
     <Reference Include="Unity.Rider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Mathematics">
+      <HintPath>Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ShaderGraph.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
+      <HintPath>Library\ScriptAssemblies\Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Timeline.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Mathematics.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

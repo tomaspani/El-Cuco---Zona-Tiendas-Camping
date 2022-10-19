@@ -1,25 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class FOVKid : MonoBehaviour
 {
+
     public float radius;
     [Range(0, 360)]
     public float angle;
 
-
+    [SerializeField] float runAwayDistance;
+    float distanceToPlayer;
     public float callAdultRadius;
 
     public LayerMask targetMask, obstructionMask, callMask;
-
     public bool canSeeCuco;
-
+    bool hasSeenCuco;
+    [Header("References")]
     private SoundManager _soundMan;
     //public GameObject kidRef;
-
+    [SerializeField] KidType _kidType;
     public PlayerController player;
-
+    NavMeshAgent _nvm;
     KidController kid;
     Transform adult;
 
@@ -28,6 +31,7 @@ public class FOVKid : MonoBehaviour
 
     private void Start()
     {
+        _nvm = GetComponent<NavMeshAgent>();
         player = FindObjectOfType<PlayerController>();
         _soundMan = FindObjectOfType<SoundManager>();
         kid = GetComponent<KidController>();
@@ -37,10 +41,27 @@ public class FOVKid : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(canCallAdult && canSeeCuco)
+        distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
+        switch (_kidType)
         {
-            CallAdult(kid);
+            case KidType.Brave:
+                if (canCallAdult && canSeeCuco)
+                {
+                    CallAdult(kid);
+                }
+                break;
+            case KidType.Coward:
+                if (canSeeCuco || hasSeenCuco)
+                {
+                    RunAway();
+                }
+               
+                    break;
+
+            case KidType.Glutton:
+                break;
         }
+      
     }
 
     private IEnumerator FOVRoutine()
@@ -66,7 +87,7 @@ public class FOVKid : MonoBehaviour
 
         }
     }
-
+    #region SeeCuco
     private void FieldOfViewCheck()
     {
         Collider[] CucoRangeChecks = Physics.OverlapSphere(transform.position, radius, targetMask);
@@ -97,7 +118,8 @@ public class FOVKid : MonoBehaviour
         else
             canSeeCuco = false;
     }
-
+    #endregion
+    #region CallAdult
     private void FieldOfViewCallAdult()
     {
         Collider[] CallAdultCheck = Physics.OverlapSphere(transform.position, callAdultRadius, callMask);
@@ -138,7 +160,28 @@ public class FOVKid : MonoBehaviour
     {
         return adult;
     }
+    #endregion
+    #region RunAway
 
+    void RunAway()
+    {
+        if (distanceToPlayer > runAwayDistance)
+        {
+            hasSeenCuco = false;
+        }
+        else
+        { hasSeenCuco = true; }
+        Vector3 dirToPlayer = transform.position - player.transform.position;
+        Vector3 newPosition = transform.position + dirToPlayer;
+        _nvm.SetDestination(newPosition);
+      
+        
+    }
+    
+    #endregion
+
+
+    #region CheckeoSFX
     //----------------------------------------CHEQUEO SFX-----------------------------------------------------------------------------------
 
     bool checkitCanSeeCuco;
@@ -174,5 +217,11 @@ public class FOVKid : MonoBehaviour
         //    }
         //}
     }
-
+#endregion
+enum KidType
+{
+    Coward,
+    Brave,
+    Glutton
+}
 

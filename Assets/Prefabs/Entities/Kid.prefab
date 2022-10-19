@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -2618436828950510571}
   m_Layer: 10
   m_Name: Kid
-  m_TagString: Untagged
+  m_TagString: Kid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -119,7 +119,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 3.5
   angle: 90
+<<<<<<< Updated upstream
   callAdultRadius: 0
+=======
+  runAwayDistance: 10
+  callAdultRadius: 20
+>>>>>>> Stashed changes
   targetMask:
     serializedVersion: 2
     m_Bits: 512
@@ -130,6 +135,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2048
   canSeeCuco: 0
+  _kidType: 1
   player: {fileID: 0}
 --- !u!1 &1046265118106743463
 GameObject:

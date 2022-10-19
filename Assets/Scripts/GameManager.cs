@@ -6,10 +6,12 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     private PlayerController player;
+    private int KidCount;
 
     private void Start()
     {
         player = FindObjectOfType<PlayerController>();
+        KidCount = GameObject.FindGameObjectsWithTag("Kid").Length;
     }
 
     private void Update()
@@ -20,16 +22,21 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
+       
 
 
+<<<<<<< Updated upstream
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
         /*if (player.kidnappedKids == 4)
+=======
+        if (player.kidnappedKids == KidCount)
+>>>>>>> Stashed changes
         {
             Debug.Log("Ganaste pro");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }*/
+            SceneManager.LoadScene(1);
+        }
     }
 }
