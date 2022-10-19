@@ -20,10 +20,10 @@ public class PlayerController : MonoBehaviour
     {
         kidnappedKids++;
         kidsInBag++;
-        if(kidnappedKids == 1)
-        {
-            kid.SpawnCandy();
-        }
+        //if(kidnappedKids == 1)
+        //{
+        //    kid.SpawnCandy();
+        //}
         kid.kidnap();
     }
 

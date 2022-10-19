@@ -21,7 +21,7 @@ public class FollowCandy : MonoBehaviour
     {
         TargetedCandy = NearestCandy();
         Distance = Vector3.Distance(this.transform.position, TargetedCandy.transform.position);
-        if (Distance < FollowDistance && _fov.canSeeCuco == true)
+        if (Distance < FollowDistance && _fov.canSeeCuco == false)
         {ChaseCandy();}
         else { _fov.enabled = true; }
         
