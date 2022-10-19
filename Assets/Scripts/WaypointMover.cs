@@ -30,7 +30,8 @@ public class WaypointMover : MonoBehaviour
 
     private Vector3 lastPosition;
 
-
+    float count;
+    public float timeToLook;
 
     private void Start()
     {
@@ -47,26 +48,11 @@ public class WaypointMover : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Debug.Log(getsCalled);
         var distanceToWaypoint = Vector3.Distance(_currentWaypoint.position, transform.position);
         
         switch (type)
         {
-<<<<<<< Updated upstream
-            SeesPlayer();
-        }
-        else if (getsCalled!)
-        {
-            _navMeshAgent.isStopped = false;
-            if (distanceToWaypoint <= _distanceToCheck)
-            {
-
-                
-                ChangeLookPosition();
-                    //Invoke(nameof(ChangeLookPosition), _lookingTime);
-=======
             case AdultType.Guard:
->>>>>>> Stashed changes
                 
                 if (_fov.seesPlayer!)
                 {
@@ -87,15 +73,6 @@ public class WaypointMover : MonoBehaviour
                         if (!IsLookingAround)
                         {
 
-<<<<<<< Updated upstream
-                if (!IsLookingAround) 
-                { 
-                    ChangeWaypoint(); 
-                }
-               
-            }
-        }
-=======
                             ChangeWaypoint();
                         }
 
@@ -133,7 +110,6 @@ public class WaypointMover : MonoBehaviour
                 }
                 CanSeePlayer();
                 break;
->>>>>>> Stashed changes
 
         }
         
@@ -143,32 +119,25 @@ public class WaypointMover : MonoBehaviour
     #region GotoKid
     public void GoToKid(KidController kid)
     {
-        var targetRotation = Quaternion.LookRotation(kid.transform.position - transform.position);
-        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 2.5f * Time.deltaTime);
         float distanceToTarget = Vector3.Distance(transform.position, kid.transform.position);
-        if (distanceToTarget > _distanceToCheck)
+        var targetRotation = Quaternion.LookRotation(kid.transform.position - transform.position);
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 1000f * Time.fixedDeltaTime);
+        if (distanceToTarget > 2f)
         {
             getsCalled = true;
-            
-            transform.position = Vector3.MoveTowards(transform.position, kid.transform.position, movSpeed/4 * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, kid.transform.position, movSpeed * Time.fixedDeltaTime);
             _navMeshAgent.isStopped = true;
         }
-        else
-        {
-            
-            _navMeshAgent.isStopped = false;
-        }
-        
+        //else
+        //{
+        //    getsCalled = false;
+        //}
+        //getsCalled = false;
 
 
     }
-<<<<<<< Updated upstream
-
-    #region LookingAtPlayer
-=======
     #endregion
 
->>>>>>> Stashed changes
     //DONE
     private void CanSeePlayer()
     {
@@ -211,14 +180,15 @@ public class WaypointMover : MonoBehaviour
             //transform.LookAt(currentWaypoint);
         }
     }
-    #endregion
-    #region Waypoints
+
+
+
     void ChangeWaypoint()
     {
         //Debug.Log(_currentWaypointIndex);
         //Debug.Log(_waypoints.Count);
-        //if (getsCalled == false)
-        //{
+        if (getsCalled == false)
+        {
             if (_currentWaypointIndex < _waypoints.Count - 1)
             {
                 _currentWaypointIndex += 1;
@@ -232,7 +202,7 @@ public class WaypointMover : MonoBehaviour
             _navMeshAgent.SetDestination(_currentWaypoint.position);
             var targetRotation = Quaternion.LookRotation(_currentWaypoint.transform.position - transform.position);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, movSpeed * Time.deltaTime);
-        //}  
+        }  
 
 
     }
@@ -241,11 +211,11 @@ public class WaypointMover : MonoBehaviour
         //
     }
 
-    #endregion
-    #region LookPosition
+   
+    
     void ChangeLookPosition ()
     {
-        Debug.Log("mirando a posicion");
+
         IsLookingAround = true;
         _navMeshAgent.isStopped = true;     
         currentWatchPosition = _positionsToCheck[_currentWatchPositionIndex];
@@ -258,7 +228,6 @@ public class WaypointMover : MonoBehaviour
         if (counter >= _lookingTime)
         {
             _currentWatchPositionIndex += 1;
-            Debug.Log(_currentWatchPositionIndex);
             counter = 0;
         }
         if (_currentWatchPositionIndex >= _positionsToCheck.Count)
@@ -267,9 +236,6 @@ public class WaypointMover : MonoBehaviour
             _currentWatchPositionIndex = 0;
         }
     }
-<<<<<<< Updated upstream
-    #endregion
-=======
 
     void ReturnToWatchPost ()
     {
@@ -295,7 +261,6 @@ public class WaypointMover : MonoBehaviour
         }
 
     }
->>>>>>> Stashed changes
 }
 enum AdultType
 {

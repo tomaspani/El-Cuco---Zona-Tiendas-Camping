@@ -25,15 +25,7 @@ public class GameManager : MonoBehaviour
        
 
 
-<<<<<<< Updated upstream
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }
-        /*if (player.kidnappedKids == 4)
-=======
         if (player.kidnappedKids == KidCount)
->>>>>>> Stashed changes
         {
             Debug.Log("Ganaste pro");
             SceneManager.LoadScene(1);
