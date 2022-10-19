@@ -108,7 +108,7 @@ NavMeshSettings:
     agentTypeID: 0
     agentRadius: 0.5
     agentHeight: 2
-    agentSlope: 45
+    agentSlope: 8
     agentClimb: 0.4
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
@@ -11466,7 +11466,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh22078
+  m_Name: pb_Mesh18186
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12725,7 +12725,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh21456
+  m_Name: pb_Mesh17552
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -20797,6 +20797,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1489575958}
     m_Modifications:
     - target: {fileID: -2618436828950510571, guid: 2af7eed77dabe0045984045a75966a46, type: 3}
+      propertyPath: _kidType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2618436828950510571, guid: 2af7eed77dabe0045984045a75966a46, type: 3}
       propertyPath: callAdultRadius
       value: 20
       objectReference: {fileID: 0}
@@ -20865,7 +20869,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh21476
+  m_Name: pb_Mesh17572
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
