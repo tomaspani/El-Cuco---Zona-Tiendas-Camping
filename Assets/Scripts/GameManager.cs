@@ -19,11 +19,9 @@ public class GameManager : MonoBehaviour
         if (player.suspicion >= 100f)
         {
             Debug.Log("Perdiste lince");
+            player.kidnappedKids = 0;
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
-
-       
-
 
         if (player.kidnappedKids == KidCount)
         {
