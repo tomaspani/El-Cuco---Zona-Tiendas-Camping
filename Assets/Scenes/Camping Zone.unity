@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.055807523, g: 0.071531005, b: 0.09356276, a: 1}
+  m_IndirectSpecularColor: {r: 0.055807605, g: 0.071531124, b: 0.09356312, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -11987,7 +11987,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh27464
+  m_Name: pb_Mesh28802
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -13241,7 +13241,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh26782
+  m_Name: pb_Mesh28120
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -22046,7 +22046,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh26802
+  m_Name: pb_Mesh28140
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -24291,6 +24291,18 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 3.71
       objectReference: {fileID: 0}
+    - target: {fileID: 5543261558655779113, guid: 0e0abac38e9f7624692e74bd7230a856, type: 3}
+      propertyPath: mat.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5543261558655779113, guid: 0e0abac38e9f7624692e74bd7230a856, type: 3}
+      propertyPath: mat.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 77782efea53bc6d4ba278abfa61dc762, type: 2}
+    - target: {fileID: 5543261558655779113, guid: 0e0abac38e9f7624692e74bd7230a856, type: 3}
+      propertyPath: mat.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0b8e0f48f6262bd4d93a82249a5718a5, type: 2}
     - target: {fileID: 6728686491768234306, guid: 0e0abac38e9f7624692e74bd7230a856, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.67

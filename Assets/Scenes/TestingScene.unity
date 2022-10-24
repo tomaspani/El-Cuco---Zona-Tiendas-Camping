@@ -371,7 +371,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-36934
+  m_Name: pb_Mesh20198
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -760,14 +760,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a97e1427135d3341aa0cfb7f492d94e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outlineMaterial: {fileID: 2100000, guid: 517c9ee1d0b7408489b04c570a1264fe, type: 2}
-  outlineScaleFactor: -1.1
-  outlineColor:
-    r: 1
-    g: 1
-    b: 1
-    a: 0
-  outlineRenderer: {fileID: 0}
 --- !u!1001 &1928665273
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -850,7 +842,7 @@ GameObject:
   - component: {fileID: 2045596190}
   - component: {fileID: 2045596189}
   - component: {fileID: 2045596188}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}

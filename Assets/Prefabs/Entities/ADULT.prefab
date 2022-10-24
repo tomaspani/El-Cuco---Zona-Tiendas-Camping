@@ -342,3 +342,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   suspcionValue: 5
+  mat:
+  - {fileID: 2100000, guid: 77782efea53bc6d4ba278abfa61dc762, type: 2}
+  - {fileID: 2100000, guid: 0b8e0f48f6262bd4d93a82249a5718a5, type: 2}
