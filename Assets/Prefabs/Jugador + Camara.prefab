@@ -5309,6 +5309,7 @@ GameObject:
   - component: {fileID: 3095059110770711224}
   - component: {fileID: 3095059110770711227}
   - component: {fileID: 3095059110770710854}
+  - component: {fileID: 3717661854539817258}
   - component: {fileID: 3095059110770711226}
   m_Layer: 9
   m_Name: Player
@@ -5368,7 +5369,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _moveSpeed: 5
-  DashSpeed: 15
   groundDrag: 5
   _playerHeight: 2
   _grounded: 0
@@ -5523,6 +5523,21 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3717661854539817258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3095059110770710862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 179bf75c2b29d014bae4e0170c81049b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lvl: 0
+  _dashUpgrade: 10
+  _speedUpgrade: 1
 --- !u!114 &3095059110770711226
 MonoBehaviour:
   m_ObjectHideFlags: 0

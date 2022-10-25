@@ -53,37 +53,38 @@
     <UnityVersion>2020.3.25f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\CucoDetection.cs" />
-    <Compile Include="Assets\Scripts\AlertFeedback.cs" />
+    <Compile Include="Assets\Scripts\Cuco\CucoDetection.cs" />
+    <Compile Include="Assets\Scripts\Adult\AlertFeedback.cs" />
     <Compile Include="Assets\Scripts\Pausa\Ajustes.cs" />
-    <Compile Include="Assets\Scripts\FOVCuco.cs" />
-    <Compile Include="Assets\Scripts\NavMeshWaypoints.cs" />
-    <Compile Include="Assets\Scripts\Waypoints.cs" />
-    <Compile Include="Assets\Scripts\KidController.cs" />
-    <Compile Include="Assets\Scripts\EnergyBar.cs" />
-    <Compile Include="Assets\Scripts\ThrowObject.cs" />
-    <Compile Include="Assets\Scripts\BushHide.cs" />
-    <Compile Include="Assets\Scripts\WaypointMover.cs" />
-    <Compile Include="Assets\Scripts\Energy.cs" />
-    <Compile Include="Assets\Scripts\DestroyCandy.cs" />
-    <Compile Include="Assets\Scripts\PlayAgainButton.cs" />
-    <Compile Include="Assets\Scripts\Dash.cs" />
-    <Compile Include="Assets\Scripts\PositionsFollowAdult.cs" />
-    <Compile Include="Assets\Scripts\UIManager.cs" />
-    <Compile Include="Assets\Scripts\Consume.cs" />
-    <Compile Include="Assets\Scripts\FollowCandy.cs" />
-    <Compile Include="Assets\Scripts\SoundManager.cs" />
-    <Compile Include="Assets\Scripts\PlayerMovement.cs" />
-    <Compile Include="Assets\Scripts\CameraController.cs" />
-    <Compile Include="Assets\Scripts\FieldOfView.cs" />
-    <Compile Include="Assets\Scripts\FOVKid.cs" />
-    <Compile Include="Assets\Scripts\PickUpCandy.cs" />
-    <Compile Include="Assets\Scripts\PlayerController.cs" />
-    <Compile Include="Assets\Scripts\AdultController.cs" />
-    <Compile Include="Assets\Scripts\CameraFollow.cs" />
-    <Compile Include="Assets\Scripts\Pausa\Pausa.cs" />
-    <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Cuco\FOVCuco.cs" />
+    <Compile Include="Assets\Scripts\Adult\NavMeshWaypoints.cs" />
+    <Compile Include="Assets\Scripts\Adult\Waypoints.cs" />
+    <Compile Include="Assets\Scripts\Kid\KidController.cs" />
+    <Compile Include="Assets\Scripts\Cuco\EnergyBar.cs" />
     <Compile Include="Assets\SeeThrough.cs" />
+    <Compile Include="Assets\Scripts\Cuco\ThrowObject.cs" />
+    <Compile Include="Assets\Scripts\Cuco\BushHide.cs" />
+    <Compile Include="Assets\Scripts\Adult\WaypointMover.cs" />
+    <Compile Include="Assets\Scripts\Cuco\Energy.cs" />
+    <Compile Include="Assets\Scripts\Kid\DestroyCandy.cs" />
+    <Compile Include="Assets\Scripts\Game\PlayAgainButton.cs" />
+    <Compile Include="Assets\Scripts\Cuco\Dash.cs" />
+    <Compile Include="Assets\Scripts\Adult\PositionsFollowAdult.cs" />
+    <Compile Include="Assets\Scripts\Game\UIManager.cs" />
+    <Compile Include="Assets\Scripts\Cuco\Consume.cs" />
+    <Compile Include="Assets\Scripts\Kid\FollowCandy.cs" />
+    <Compile Include="Assets\Scripts\Game\SoundManager.cs" />
+    <Compile Include="Assets\Scripts\Cuco\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Cuco\CameraController.cs" />
+    <Compile Include="Assets\Scripts\Adult\FieldOfView.cs" />
+    <Compile Include="Assets\Scripts\Kid\FOVKid.cs" />
+    <Compile Include="Assets\Scripts\Cuco\PickUpCandy.cs" />
+    <Compile Include="Assets\Scripts\Cuco\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Adult\AdultController.cs" />
+    <Compile Include="Assets\Scripts\Cuco\CameraFollow.cs" />
+    <Compile Include="Assets\Scripts\Pausa\Pausa.cs" />
+    <Compile Include="Assets\Scripts\Game\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Cuco\CucoUpgrades.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -335,6 +336,15 @@
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.25f1\Editor\Data\PlaybackEngines\AppleTVSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.25f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.25f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Common.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.25f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>
