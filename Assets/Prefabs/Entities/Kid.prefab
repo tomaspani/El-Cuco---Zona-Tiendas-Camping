@@ -126,7 +126,7 @@ MonoBehaviour:
     m_Bits: 512
   obstructionMask:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 384
   callMask:
     serializedVersion: 2
     m_Bits: 2048

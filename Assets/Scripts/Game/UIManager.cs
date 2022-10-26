@@ -49,7 +49,7 @@ public class UIManager : MonoBehaviour
                 stealth.color = color;
             }*/
             
-            stealth.color = new Vector4(color.r, color.g, color.b, Mathf.Lerp(0f, 50f, 0.5f * Time.fixedDeltaTime));
+            stealth.color = new Vector4(color.r, color.g, color.b, Mathf.Lerp(0f, 70f, 0.5f * Time.fixedDeltaTime));
 
         }
         else

@@ -47,7 +47,7 @@ public class AdultController : MonoBehaviour
             LooseSuspicion(_fov.playerRef);
         }
 
-        SeeThrough();
+        //SeeThrough();
     }
 
     public void AddSuspicion(GameObject player)

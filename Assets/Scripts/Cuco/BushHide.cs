@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BushHide : MonoBehaviour
 {
-    private int hidden = 7;
+    private int hidden = 6;
     private int notHidden = 8;
     private PlayerController playerRef;
 
@@ -25,7 +25,17 @@ public class BushHide : MonoBehaviour
         //Debug.Log(playerRef);
         if(other.gameObject.tag == "bush")
         {
-            //other.gameObject.layer = hidden;
+
+            Transform bush = other.gameObject.transform;
+            foreach (Transform child in bush)
+            {
+                foreach(Transform superChild in child)
+                {
+                    superChild.gameObject.layer = hidden;
+                }
+               
+            }
+
             playerRef.isHidden = true;
         }
        
@@ -36,7 +46,15 @@ public class BushHide : MonoBehaviour
         //Debug.Log(playerRef);
         if (other.gameObject.tag == "bush")
         {
-            //other.gameObject.layer = notHidden;
+            Transform bush = other.gameObject.transform;
+            foreach (Transform child in bush)
+            {
+                foreach (Transform superChild in child)
+                {
+                    superChild.gameObject.layer = notHidden;
+                }
+            }
+
             playerRef.isHidden = false;
         }
         
