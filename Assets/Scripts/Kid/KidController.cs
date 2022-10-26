@@ -7,6 +7,7 @@ public class KidController : MonoBehaviour
 {
     public Text feedback;
     public bool isKidnapable;
+    public bool isKidnapableee;
     public GameObject candy;
     public GameObject candyDrop;
 
@@ -15,11 +16,15 @@ public class KidController : MonoBehaviour
     private FOVKid _fov;
     private bool _canSeeCuco;
     private SoundManager _soundMan;
+    private OutlineScript outline;
+    private SeeThrough st;
 
     private void Start()
     {
         _fov = GetComponent<FOVKid>();
         _soundMan = FindObjectOfType<SoundManager>();
+        outline = GetComponentInChildren<OutlineScript>();
+        st = GetComponentInChildren<SeeThrough>();
     }
 
     private void FixedUpdate()
@@ -30,7 +35,20 @@ public class KidController : MonoBehaviour
         if (_canSeeCuco == true)
             SeeCuco();
         //else
-            //cantSeeCuco();
+        //cantSeeCuco();
+
+        if (isKidnapableee)
+        {
+            st.enabled = false;
+            outline.Enable();
+        }
+        else 
+        {
+            st.enabled = true;
+
+            outline.Disable();
+        }
+        
     }
 
 
@@ -39,7 +57,8 @@ public class KidController : MonoBehaviour
         if(other.gameObject.tag == "Player" && _canSeeCuco == false)
         {
             isKidnapable = true;
-            feedback.text = "Press Left Click to Kidnap";
+            isKidnapableee = true;
+            //feedback.text = "Press Left Click to Kidnap";
         }
         
     }
@@ -49,7 +68,8 @@ public class KidController : MonoBehaviour
         if (other.gameObject.tag == "Player" && _canSeeCuco == false)
         {
             isKidnapable = true;
-            feedback.text = "Press Left Click to Kidnap";
+            isKidnapableee = true;
+            //feedback.text = "Press Left Click to Kidnap";
         }
         
     }
@@ -59,7 +79,8 @@ public class KidController : MonoBehaviour
         if (other.gameObject.tag == "Player" )
         {
             isKidnapable = false;
-            feedback.text = "";
+            isKidnapableee = false;
+            //feedback.text = "";
         }
         
     }

@@ -6,11 +6,13 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     private PlayerController player;
+    private Consume consumeeeee;
     public int KidCount;
 
     private void Awake()
     {
         KidCount = GameObject.FindGameObjectsWithTag("Kid").Length;
+        consumeeeee = FindObjectOfType<Consume>();
     }
     private void Start()
     {
@@ -27,7 +29,7 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
-        if (player.kidnappedKids == KidCount)
+        if (consumeeeee.totalConsumedKids == KidCount)
         {
             Debug.Log("Ganaste pro");
             SceneManager.LoadScene(1);

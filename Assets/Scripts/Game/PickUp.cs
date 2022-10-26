@@ -28,7 +28,7 @@ public class PickUp : MonoBehaviour
 
     private void Loot()
     {
-        if (isPickable && Input.GetMouseButtonDown(1))
+        if (isPickable && Input.GetMouseButtonDown(0))
         {
             //ui.addCandy(lootAmount);
             player.Candies += lootAmount;
