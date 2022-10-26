@@ -45,7 +45,7 @@ public class WaypointMover : MonoBehaviour
         
         
     }
-
+    #region FixedUpdate
     private void FixedUpdate()
     {
         var distanceToWaypoint = Vector3.Distance(_currentWaypoint.position, transform.position);
@@ -112,10 +112,11 @@ public class WaypointMover : MonoBehaviour
                 break;
 
         }
-        
+ 
 
 
     }
+    #endregion
     #region GotoKid
     public void GoToKid(KidController kid)
     {
@@ -139,6 +140,7 @@ public class WaypointMover : MonoBehaviour
     #endregion
 
     //DONE
+    #region DetectPlayer
     private void CanSeePlayer()
     {
         
@@ -181,7 +183,7 @@ public class WaypointMover : MonoBehaviour
         }
     }
 
-
+#endregion
 
     void ChangeWaypoint()
     {
@@ -247,7 +249,7 @@ public class WaypointMover : MonoBehaviour
         IsLookingAround = true;
         currentWatchPosition = _positionsToCheck[_currentWatchPositionIndex];
         CheckPositionRotation = Quaternion.LookRotation(currentWatchPosition.position - transform.position);
-        transform.rotation = Quaternion.Slerp(transform.rotation, CheckPositionRotation, 5f * Time.deltaTime);
+        transform.rotation = Quaternion.Slerp(transform.rotation, CheckPositionRotation, 2.5f * Time.deltaTime);
         counter += Time.deltaTime;
         if (counter >= _lookingTime)
         {
