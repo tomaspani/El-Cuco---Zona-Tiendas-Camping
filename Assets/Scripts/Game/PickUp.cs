@@ -30,7 +30,7 @@ public class PickUp : MonoBehaviour
     {
         if (isPickable && Input.GetMouseButtonDown(1))
         {
-            ui.addCandy(lootAmount);
+            //ui.addCandy(lootAmount);
             player.Candies += lootAmount;
             
             sm.PlaySound("kidnap");

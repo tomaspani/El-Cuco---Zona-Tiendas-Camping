@@ -18,10 +18,7 @@ public class UIManager : MonoBehaviour
 
     Color color;
 
-    IEnumerator waitCouroutine()
-    {
-        yield return new WaitForSeconds(10.0f);
-    }
+
 
     private void Start()
     {
@@ -30,12 +27,24 @@ public class UIManager : MonoBehaviour
         color = stealth.color;
     }
 
-    public void addCandy(int cant)
+    float count = 0f;
+
+
+    /*public void addCandy(int cant)
     {
-        candyplus.enabled = true;
-        candyplus.text = "Candy +" + cant;
-        
-    }
+        count = 0f;
+        if(count < 0.1f)
+        {
+            candyplus.text = "Candy +" + cant;
+        }
+        else
+        {
+            candyplus.text = "";
+            count = 0f;
+        }
+
+
+    }*/
 
 
     private void Update()
@@ -43,6 +52,7 @@ public class UIManager : MonoBehaviour
         sus.value = player.suspicion;
         candy.text = "Candies: " + candieMan.Candies;
         kidsInBag.text = "" + player.kidsInBag;
+        count += Time.deltaTime;
     }
 
     private void FixedUpdate()
