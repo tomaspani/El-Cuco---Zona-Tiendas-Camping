@@ -5,10 +5,11 @@ using UnityEngine;
 public class FindEntities : MonoBehaviour
 {
     public float radius;
-    
+   
 
     public LayerMask targetMask;
 
+   
 
     private void Start()
     {
@@ -17,7 +18,7 @@ public class FindEntities : MonoBehaviour
 
     private IEnumerator FOVRoutine()
     {
-        WaitForSeconds wait = new WaitForSeconds(0.2f);
+        WaitForSeconds wait = new WaitForSeconds(0.01f);
 
         while (true)
         {
@@ -30,14 +31,21 @@ public class FindEntities : MonoBehaviour
     {
         Collider[] FindEntitiesCheck = Physics.OverlapSphere(transform.position, radius, targetMask);
 
+       
         if (FindEntitiesCheck.Length != 0)
         {
-            foreach(Collider entity in FindEntitiesCheck)
+
+            if (Input.GetKeyDown(KeyCode.Tab))
             {
-                checkEntity(entity).ActivateSeeThrough();
-                //checkEntity(entity).isActivated = false;
+                foreach (Collider entity in FindEntitiesCheck)
+                {
+                    checkEntity(entity).ActivateSeeThrough();
+                    //checkEntity(entity).isActivated = false;
+                }
             }
+            
         }
+       
     }
 
 

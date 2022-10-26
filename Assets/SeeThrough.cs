@@ -15,7 +15,15 @@ public class SeeThrough : MonoBehaviour
     private void Update()
     {
 
+        count += Time.deltaTime;
+        if (count > 2f)
+        {
+
+            isActivated = false;
+        }
+
         Activate();
+
        /* if (isActivated != checkBool)
         {
             checkBool = isActivated;
@@ -35,6 +43,7 @@ public class SeeThrough : MonoBehaviour
         }
         else
         {
+            count = 0;
             this.gameObject.GetComponent<MeshRenderer>().material = mat[0];
         }
     }
@@ -42,15 +51,10 @@ public class SeeThrough : MonoBehaviour
 
     public void ActivateSeeThrough()
     {
-        Debug.Log(count);
-        count += Time.fixedDeltaTime;
-        if(count < 0.25f)isActivated = true;
-        else
-        {
-            isActivated = false;
-            count = 0f;
-        }
         
+        isActivated = true;
+        count = 0;
+
     }
 
 }
