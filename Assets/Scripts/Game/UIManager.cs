@@ -8,6 +8,7 @@ public class UIManager : MonoBehaviour
 {
     public Slider sus;
     public Text candy;
+    public Text candyplus;
     public TMP_Text kidsInBag;
     public Image stealth;
     public float timeMax;
@@ -17,11 +18,23 @@ public class UIManager : MonoBehaviour
 
     Color color;
 
+    IEnumerator waitCouroutine()
+    {
+        yield return new WaitForSeconds(10.0f);
+    }
+
     private void Start()
     {
         player = FindObjectOfType<PlayerController>();
         candieMan = FindObjectOfType<ThrowObject>();
         color = stealth.color;
+    }
+
+    public void addCandy(int cant)
+    {
+        candyplus.enabled = true;
+        candyplus.text = "Candy +" + cant;
+        
     }
 
 

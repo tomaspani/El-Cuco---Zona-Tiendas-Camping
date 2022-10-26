@@ -15,7 +15,7 @@ public class AdultController : MonoBehaviour
     {
         //if(_fov == null)
         //{
-        this.gameObject.GetComponent<MeshRenderer>().material = mat[0];
+        //this.gameObject.GetComponent<MeshRenderer>().material = mat[0];
         _fov = this.GetComponentInParent<FieldOfView>();
         _WM = this.GetComponentInParent<WaypointMover>();
         //}
