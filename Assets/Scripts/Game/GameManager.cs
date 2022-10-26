@@ -6,12 +6,16 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     private PlayerController player;
-    private int KidCount;
+    public int KidCount;
 
+    private void Awake()
+    {
+        KidCount = GameObject.FindGameObjectsWithTag("Kid").Length;
+    }
     private void Start()
     {
         player = FindObjectOfType<PlayerController>();
-        KidCount = GameObject.FindGameObjectsWithTag("Kid").Length;
+       
     }
 
     private void Update()

@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\Cuco\BushHide.cs" />
     <Compile Include="Assets\Scripts\Adult\WaypointMover.cs" />
     <Compile Include="Assets\Scripts\Cuco\Energy.cs" />
+    <Compile Include="Assets\Scripts\Cuco\FindEntities.cs" />
     <Compile Include="Assets\Scripts\Kid\DestroyCandy.cs" />
     <Compile Include="Assets\Scripts\Game\PlayAgainButton.cs" />
     <Compile Include="Assets\Scripts\Cuco\Dash.cs" />
@@ -85,7 +86,7 @@
     <Compile Include="Assets\Scripts\Cuco\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Pausa\Pausa.cs" />
     <Compile Include="Assets\Scripts\Game\GameManager.cs" />
-    <Compile Include="Assets\Scripts\Cuco\FindEntities.cs" />
+    <Compile Include="Assets\Scripts\Cuco\UIKidCounter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -337,6 +338,15 @@
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.25f1\Editor\Data\PlaybackEngines\AppleTVSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.25f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.25f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Common.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.25f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>

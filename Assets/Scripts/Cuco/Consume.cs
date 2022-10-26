@@ -10,11 +10,12 @@ public class Consume : MonoBehaviour
     private PlayerController _player;
     private SoundManager _sound;
     CucoUpgrades _cucoUpgrades;
-
+    [SerializeField] UIKidCounter kidcounter; 
+     
     [Header("Values")]
     public int restoreEnergy;
     public float maxTimer;
-
+    public int totalConsumedKids;
     public Slider timer;
 
     public bool isConsuming;
@@ -26,7 +27,7 @@ public class Consume : MonoBehaviour
         _player = GetComponent<PlayerController>();
         _sound = FindObjectOfType<SoundManager>();
         timer.gameObject.SetActive(false);
-        
+        kidcounter.UpdateTXT(totalConsumedKids);
     }
 
     private void Update()
@@ -67,6 +68,8 @@ public class Consume : MonoBehaviour
         //isConsuming = true;
         _energy.ChangeEnergy(restoreEnergy * amountKids);
         _cucoUpgrades.LevelUp(_player.kidsInBag);
+        totalConsumedKids += _player.kidsInBag;
+        kidcounter.UpdateTXT(totalConsumedKids);
         _player.Consume();
         
        
