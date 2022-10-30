@@ -85,10 +85,17 @@
     <Compile Include="Assets\Scripts\Cuco\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Adult\AdultController.cs" />
     <Compile Include="Assets\Scripts\Cuco\CameraFollow.cs" />
+    <Compile Include="Assets\Scripts\Game\PickUp.cs" />
+    <Compile Include="Assets\Scripts\Game\OutlineScript.cs" />
     <Compile Include="Assets\Scripts\Pausa\Pausa.cs" />
     <Compile Include="Assets\Scripts\Game\GameManager.cs" />
-    <Compile Include="Assets\Scripts\Game\OutlineScript.cs" />
-    <Compile Include="Assets\Scripts\Game\PickUp.cs" />
+    <Compile Include="Assets\Scripts\FSM\BaseStateMachine.cs" />
+    <Compile Include="Assets\Scripts\FSM\BaseState.cs" />
+    <Compile Include="Assets\Scripts\FSM\State.cs" />
+    <Compile Include="Assets\Scripts\FSM\RemainInState.cs" />
+    <Compile Include="Assets\Scripts\FSM\FSMAction.cs" />
+    <Compile Include="Assets\Scripts\FSM\Decision.cs" />
+    <Compile Include="Assets\Scripts\FSM\Transition.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
