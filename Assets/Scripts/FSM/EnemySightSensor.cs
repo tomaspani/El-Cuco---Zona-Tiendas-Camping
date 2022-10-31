@@ -7,7 +7,7 @@ public class EnemySightSensor : MonoBehaviour
     public Transform Player { get; private set; }
 
     [SerializeField] private LayerMask _ignoreMask;
-
+    [SerializeField] private float _Range;
     private Ray _ray;
 
     private void Awake()
@@ -25,7 +25,7 @@ public class EnemySightSensor : MonoBehaviour
         if (Vector3.Dot(_ray.direction, this.transform.forward) < 0)
             return false;
 
-        if (!Physics.Raycast(_ray, out var hit, 100, ~_ignoreMask))
+        if (!Physics.Raycast(_ray, out var hit, _Range, ~_ignoreMask))
         {
             return false;
         }
@@ -41,6 +41,6 @@ public class EnemySightSensor : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawLine(_ray.origin, _ray.origin + _ray.direction * 100);
+        Gizmos.DrawLine(_ray.origin, _ray.origin + _ray.direction * _Range);
     }
 }

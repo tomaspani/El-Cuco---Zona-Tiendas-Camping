@@ -56,6 +56,7 @@
     <Compile Include="Assets\Scripts\Cuco\CucoDetection.cs" />
     <Compile Include="Assets\Scripts\Adult\AlertFeedback.cs" />
     <Compile Include="Assets\Scripts\Pausa\Ajustes.cs" />
+    <Compile Include="Assets\Scripts\FSM\Actions\ChaseAction.cs" />
     <Compile Include="Assets\Scripts\Cuco\FOVCuco.cs" />
     <Compile Include="Assets\Scripts\Adult\NavMeshWaypoints.cs" />
     <Compile Include="Assets\Scripts\Adult\Waypoints.cs" />
@@ -75,6 +76,7 @@
     <Compile Include="Assets\Scripts\Adult\PositionsFollowAdult.cs" />
     <Compile Include="Assets\Scripts\Game\UIManager.cs" />
     <Compile Include="Assets\Scripts\Cuco\Consume.cs" />
+    <Compile Include="Assets\Scripts\FSM\EnemySightSensor.cs" />
     <Compile Include="Assets\Scripts\Kid\FollowCandy.cs" />
     <Compile Include="Assets\Scripts\Game\SoundManager.cs" />
     <Compile Include="Assets\Scripts\Cuco\PlayerMovement.cs" />
@@ -86,21 +88,20 @@
     <Compile Include="Assets\Scripts\FSM\RemainInState.cs" />
     <Compile Include="Assets\Scripts\FSM\State.cs" />
     <Compile Include="Assets\Scripts\Cuco\PickUpCandy.cs" />
+    <Compile Include="Assets\Scripts\FSM\Actions\PatrolAction.cs" />
     <Compile Include="Assets\Scripts\Cuco\PlayerController.cs" />
     <Compile Include="Assets\Scripts\FSM\BaseStateMachine.cs" />
     <Compile Include="Assets\Scripts\Adult\AdultController.cs" />
     <Compile Include="Assets\Scripts\Cuco\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\FSM\Transition.cs" />
+    <Compile Include="Assets\Scripts\FSM\PatrolPoints.cs" />
     <Compile Include="Assets\Scripts\Game\PickUp.cs" />
+    <Compile Include="Assets\Scripts\FSM\Decisions\InLineOfSightDecision.cs" />
     <Compile Include="Assets\Scripts\Game\OutlineScript.cs" />
     <Compile Include="Assets\Scripts\FSM\Decision.cs" />
     <Compile Include="Assets\Scripts\Pausa\Pausa.cs" />
     <Compile Include="Assets\Scripts\Game\GameManager.cs" />
-    <Compile Include="Assets\Scripts\FSM\Actions\PatrolAction.cs" />
-    <Compile Include="Assets\Scripts\FSM\Actions\ChaseAction.cs" />
-    <Compile Include="Assets\Scripts\FSM\PatrolPoints.cs" />
-    <Compile Include="Assets\Scripts\FSM\EnemySightSensor.cs" />
-    <Compile Include="Assets\Scripts\FSM\Decisions\InLineOfSightDecision.cs" />
+    <Compile Include="Assets\Scripts\FSM\Decisions\OutLineOfSightDecision.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -8,6 +8,7 @@ public class InLineOfSightDecision : Decision
     public override bool Decide(BaseStateMachine stateMachine)
     {
         var enemyInLineOfSight = stateMachine.GetComponent<EnemySightSensor>();
+        Debug.Log(enemyInLineOfSight.Ping());
         return enemyInLineOfSight.Ping();
     }
 }
