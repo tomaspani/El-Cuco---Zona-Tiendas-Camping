@@ -19,12 +19,17 @@ public class KidController : MonoBehaviour
     private OutlineScript outline;
     private SeeThrough st;
 
+    private Animator _myAnim;
+
+
     private void Start()
     {
         _fov = GetComponent<FOVKid>();
         _soundMan = FindObjectOfType<SoundManager>();
         outline = GetComponentInChildren<OutlineScript>();
         st = GetComponentInChildren<SeeThrough>();
+        _myAnim = GetComponent<Animator>();
+
     }
 
     private void FixedUpdate()
@@ -116,4 +121,5 @@ public class KidController : MonoBehaviour
     {
         Instantiate(candy, candyDrop.transform.position, Quaternion.identity);
     }
+
 }

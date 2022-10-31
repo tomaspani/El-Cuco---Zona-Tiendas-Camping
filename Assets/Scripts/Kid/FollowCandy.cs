@@ -11,10 +11,16 @@ public class FollowCandy : MonoBehaviour
     [SerializeField] GameObject TargetedCandy;
     [SerializeField] float Distance;
     FOVKid _fov;
+
+    private Animator _myAnim;
+    [SerializeField] private AnimationClip _candy;
+
     public float FollowDistance;
     private void Start()
     {
         _fov = GetComponent<FOVKid>();
+        _myAnim = GetComponent<Animator>();
+
     }
 
     private void Update()
@@ -45,5 +51,12 @@ public class FollowCandy : MonoBehaviour
         Kid.GetComponent<KidController>().isKidnapable = true;
         _fov.canSeeCuco = false;
         _fov.enabled = false;
+    }
+
+    private IEnumerator crPickUpCandy()
+    {
+        _myAnim.SetTrigger("candy");
+        yield return new WaitForSeconds(_candy.length);
+        _myAnim.SetTrigger("candyEnd");
     }
 }

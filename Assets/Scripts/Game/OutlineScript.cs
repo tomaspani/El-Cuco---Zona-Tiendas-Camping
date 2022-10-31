@@ -26,6 +26,8 @@ public class OutlineScript : MonoBehaviour
         rend.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
 
         outlineObject.GetComponent<OutlineScript>().enabled = false;
+        if(outlineObject.GetComponent<SeeThrough>())
+            outlineObject.GetComponent<SeeThrough>().enabled = false;
         outlineObject.GetComponent<Collider>().enabled = false;
 
         rend.enabled = false;

@@ -39,12 +39,12 @@ public class SeeThrough : MonoBehaviour
     {
         if (isActivated)
         {
-            this.gameObject.GetComponent<MeshRenderer>().material = mat[1];
+            this.gameObject.GetComponent<SkinnedMeshRenderer>().material = mat[1];
         }
         else
         {
             count = 0;
-            this.gameObject.GetComponent<MeshRenderer>().material = mat[0];
+            this.gameObject.GetComponent<SkinnedMeshRenderer>().material = mat[0];
         }
     }
 
