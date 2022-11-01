@@ -261,6 +261,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4566792573442331021, guid: 6370088aab3db92429d485f386a5115c, type: 3}
+<<<<<<< Updated upstream
+=======
       propertyPath: type
       value: 0
       objectReference: {fileID: 0}
@@ -269,6 +271,7 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4566792573442331021, guid: 6370088aab3db92429d485f386a5115c, type: 3}
+>>>>>>> Stashed changes
       propertyPath: _lookingTime
       value: 1
       objectReference: {fileID: 0}

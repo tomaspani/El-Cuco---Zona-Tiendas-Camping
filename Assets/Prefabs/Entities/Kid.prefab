@@ -119,8 +119,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 3.5
   angle: 90
+<<<<<<< Updated upstream
+  callAdultRadius: 0
+=======
   runAwayDistance: 10
   callAdultRadius: 20
+>>>>>>> Stashed changes
   targetMask:
     serializedVersion: 2
     m_Bits: 512
@@ -133,7 +137,6 @@ MonoBehaviour:
   canSeeCuco: 0
   _kidType: 1
   player: {fileID: 0}
-  canCallAdult: 0
 --- !u!1 &1046265118106743463
 GameObject:
   m_ObjectHideFlags: 0
