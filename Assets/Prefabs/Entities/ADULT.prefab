@@ -204,6 +204,10 @@ PrefabInstance:
       propertyPath: susRadius
       value: 13.55
       objectReference: {fileID: 0}
+    - target: {fileID: 4566792573442331016, guid: 6370088aab3db92429d485f386a5115c, type: 3}
+      propertyPath: obstructionMask.m_Bits
+      value: 384
+      objectReference: {fileID: 0}
     - target: {fileID: 4566792573442331017, guid: 6370088aab3db92429d485f386a5115c, type: 3}
       propertyPath: m_Name
       value: Adult (1)
@@ -261,8 +265,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4566792573442331021, guid: 6370088aab3db92429d485f386a5115c, type: 3}
-<<<<<<< Updated upstream
-=======
       propertyPath: type
       value: 0
       objectReference: {fileID: 0}
@@ -271,7 +273,6 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4566792573442331021, guid: 6370088aab3db92429d485f386a5115c, type: 3}
->>>>>>> Stashed changes
       propertyPath: _lookingTime
       value: 1
       objectReference: {fileID: 0}
@@ -345,3 +346,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   suspcionValue: 5
+  mat: []
+--- !u!114 &6867433198378936657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2886253915544171968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a2ca9c934ebb648a5895bab2f961e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mat:
+  - {fileID: 2100000, guid: 77782efea53bc6d4ba278abfa61dc762, type: 2}
+  - {fileID: 2100000, guid: 0b8e0f48f6262bd4d93a82249a5718a5, type: 2}
+  isActivated: 0

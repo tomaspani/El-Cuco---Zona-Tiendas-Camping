@@ -7,6 +7,7 @@ using UnityEditor;
 [CustomEditor(typeof(FieldOfView))]
 public class FieldOfViewEditor : Editor
 {
+    
     private void OnSceneGUI()
     {
         FieldOfView fov = (FieldOfView)target;

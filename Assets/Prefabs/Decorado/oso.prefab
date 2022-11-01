@@ -11,8 +11,6 @@ GameObject:
   - component: {fileID: 518207221363880001}
   - component: {fileID: 3503467554085584868}
   - component: {fileID: 1691706822201723694}
-  - component: {fileID: 5350452063372479455}
-  - component: {fileID: 6635839327175292554}
   m_Layer: 0
   m_Name: oso
   m_TagString: Untagged
@@ -27,13 +25,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 899270857193417467}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.33195406, y: -0.37875918, z: -0.6308013, w: 0.59028614}
+  m_LocalPosition: {x: 2.160595, y: 8.229189, z: 17.098413}
+  m_LocalScale: {x: 0.006162319, y: 0.00616232, z: 0.006162319}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -4.931, y: 105.25, z: -90.932}
 --- !u!33 &3503467554085584868
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -83,31 +81,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &5350452063372479455
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 899270857193417467}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a97e1427135d3341aa0cfb7f492d94e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMaterial: {fileID: 2100000, guid: 517c9ee1d0b7408489b04c570a1264fe, type: 2}
-  outlineScaleFactor: -1.1
-  outlineColor: {r: 0, g: 0, b: 0, a: 0}
---- !u!65 &6635839327175292554
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 899270857193417467}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 200, y: 200, z: 200}
-  m_Center: {x: -0.0000038146973, y: 0, z: -0.000019073486}

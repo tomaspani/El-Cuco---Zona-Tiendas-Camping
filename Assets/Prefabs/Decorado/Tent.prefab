@@ -15,7 +15,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7060397068677092154
 Transform:
@@ -62,7 +62,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1791315360396524937
 Transform:
@@ -109,7 +109,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4179049022233427617
 Transform:
@@ -160,7 +160,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6992092624006788061
 Transform:
@@ -187,7 +187,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7657024946295400807}
-  m_Mesh: {fileID: 9042771077998628582, guid: 7d0183a289bb0ce40829a5b8f51c9552, type: 3}
+  m_Mesh: {fileID: 7857590630482128698, guid: 7b34d59126118fd43b88930b8ad9b76e, type: 3}
 --- !u!23 &8161591175180077234
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -207,8 +207,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -1287040243696027331, guid: 7d0183a289bb0ce40829a5b8f51c9552, type: 3}
-  - {fileID: 5561349426305759274, guid: 7d0183a289bb0ce40829a5b8f51c9552, type: 3}
+  - {fileID: 2100000, guid: 6e1bda1c776e6e041b3b863fae49164b, type: 2}
+  - {fileID: 2100000, guid: 6e1bda1c776e6e041b3b863fae49164b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -279,6 +279,10 @@ PrefabInstance:
     - target: {fileID: 333640249198012210, guid: 65445cc25e426614da18c44611172598, type: 3}
       propertyPath: m_Name
       value: bolsa de dormir (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 333640249198012210, guid: 65445cc25e426614da18c44611172598, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 1146874900976778632, guid: 65445cc25e426614da18c44611172598, type: 3}
       propertyPath: m_RootOrder
