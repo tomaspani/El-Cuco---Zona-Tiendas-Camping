@@ -346,7 +346,11 @@ MonoBehaviour:
   _ignoreMask:
     serializedVersion: 2
     m_Bits: 128
-  _Range: 50
+  _targetMask:
+    serializedVersion: 2
+    m_Bits: 512
+  _susRadius: 8
+  angle: 100
 --- !u!114 &812411754
 MonoBehaviour:
   m_ObjectHideFlags: 0

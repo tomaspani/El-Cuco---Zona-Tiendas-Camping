@@ -54,6 +54,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Cuco\CucoDetection.cs" />
+    <Compile Include="Assets\Scripts\FSM\Decisions\OutLineOfSightDecision.cs" />
     <Compile Include="Assets\Scripts\Adult\AlertFeedback.cs" />
     <Compile Include="Assets\Scripts\Pausa\Ajustes.cs" />
     <Compile Include="Assets\Scripts\FSM\Actions\ChaseAction.cs" />
@@ -101,7 +102,7 @@
     <Compile Include="Assets\Scripts\FSM\Decision.cs" />
     <Compile Include="Assets\Scripts\Pausa\Pausa.cs" />
     <Compile Include="Assets\Scripts\Game\GameManager.cs" />
-    <Compile Include="Assets\Scripts\FSM\Decisions\OutLineOfSightDecision.cs" />
+    <Compile Include="Assets\Scripts\FSM\ChangeLookPosition.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

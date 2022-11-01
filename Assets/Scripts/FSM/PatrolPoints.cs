@@ -35,6 +35,7 @@ public class PatrolPoints : MonoBehaviour
             {
                 if (!agent.hasPath || agent.velocity.sqrMagnitude == 0f)
                 {
+                    Debug.Log(true);
                     return true;
                 }
             }

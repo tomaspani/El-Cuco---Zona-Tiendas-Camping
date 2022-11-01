@@ -7,8 +7,15 @@ public class EnemySightSensor : MonoBehaviour
     public Transform Player { get; private set; }
 
     [SerializeField] private LayerMask _ignoreMask;
-    [SerializeField] private float _Range;
+    [SerializeField] private LayerMask _targetMask;
+
     private Ray _ray;
+
+    [SerializeField] private float _susRadius;
+    public float SusRadius { get { return _susRadius; } }
+
+    [Range(0, 360)]
+    public float angle;
 
     private void Awake()
     {
@@ -17,7 +24,35 @@ public class EnemySightSensor : MonoBehaviour
 
     public bool Ping()
     {
-        if (Player == null)
+        Collider[] susRangeChecks = Physics.OverlapSphere(transform.position, _susRadius, _targetMask);
+
+        if (susRangeChecks.Length != 0)
+        {
+            Transform susTarget = susRangeChecks[0].transform;
+            Vector3 directionToTarget = (susTarget.position - transform.position).normalized;
+
+            if (Vector3.Angle(transform.forward, directionToTarget) < angle / 2)
+            {
+                float distanceToTarget = Vector3.Distance(transform.position, susTarget.position);
+
+                if (!Physics.Raycast(transform.position, directionToTarget, distanceToTarget, _ignoreMask))
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
+        }
+        return false;
+
+  //}
+        /*if (Player == null)
             return false;
 
         _ray = new Ray(this.transform.position, Player.position - this.transform.position);
@@ -35,12 +70,7 @@ public class EnemySightSensor : MonoBehaviour
             return true;
         }
 
-        return false;
+        return false;*/
     }
 
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawLine(_ray.origin, _ray.origin + _ray.direction * _Range);
-    }
 }
